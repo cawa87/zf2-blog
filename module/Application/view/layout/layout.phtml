@@ -1,0 +1,220 @@
+<?php echo $this->doctype(); ?>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+
+        <?php echo $this->headLink(); ?>
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->    
+        <!--[if gte IE 9]>
+      <link type="text/css" rel="stylesheet" href="_assets/css/ie9-gradients.css" />
+      <![endif]-->
+    </head>
+    <body>
+      
+        <?php echo $this->partial('partials/navigation'); ?>
+        
+        <div id="hero">
+            <?php if($this->controllerName()=='Application\Controller\Index'){ echo $this->partial('partials/slider');  } ?>
+           
+        </div><!--/hero-->
+        <div id="callout">
+            <div class="container">
+                <div class="pull-left">
+                    <h3>Converts is a beautiful, lightweight theme for everyone to use.</h3>
+                    <p>Be sure to check out our other themes, we have something you might enjoy.</p>
+                </div>
+                <div class="pull-right">
+                    <a class="blue-btn ie8-btn-fix" href="#">Buy This Theme Now</a>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container">
+                      <?php echo $this->content; ?>
+                <div class="row">
+                    <div class="span4">
+                        <div class="white-bg">
+                            <i class="icon-cog icon-position"></i>
+                            <h4>Advanced Settings</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                Pellentesque nec lacus elit. Mauris ornare tempor nulla.</p>
+                        </div><!--/white bg-->
+                    </div><!--/span4-->
+                    <div class="span4">
+                        <div class="white-bg">
+                            <i class="icon-dashboard icon-position"></i>
+                            <h4>User Dashboard</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                Pellentesque nec lacus elit. Mauris ornare tempor nulla.</p>
+                        </div><!--/white bg-->
+                    </div><!--/span4-->
+                    <div class="span4">
+                        <div class="white-bg">
+                            <i class="icon-info-sign icon-position"></i>
+                            <h4>Top Notch Support</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                Pellentesque nec lacus elit. Mauris ornare tempor nulla.</p>
+                        </div><!--/white bg-->
+                    </div><!--/span4-->
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <h3>Our Featured Work</h3>
+                    </div><!--/span12-->
+                </div>
+                <div class="row grid-listings">
+                    <div class="span3">
+                        <img src="_assets/img/work.jpg" alt="work" />
+                        <div class="white-bg box-top-fix">
+                            <h5>Lorem Ipsum Dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div><!--/work bg-->
+                    </div><!--/span3-->
+                    <div class="span3">
+                        <img src="_assets/img/work2.jpg" alt="work" />
+                        <div class="white-bg box-top-fix">
+                            <h5>Lorem Ipsum Dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div><!--/work bg-->
+                    </div><!--/span3-->
+                    <div class="span3">
+                        <img src="_assets/img/work3.jpg" alt="work" />
+                        <div class="white-bg box-top-fix">
+                            <h5>Lorem Ipsum Dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div><!--/work bg-->
+                    </div><!--/span3-->
+                    <div class="span3">
+                        <img src="_assets/img/work4.jpg" alt="work" />
+                        <div class="white-bg box-top-fix">
+                            <h5>Lorem Ipsum Dolor</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#">Read More &rarr;</a>
+                        </div><!--/work bg-->
+                    </div><!--/span3-->
+                </div>
+
+
+                <div class="row">	
+                    <div id="testimonial" class="span12">				
+
+                        <div class="white-bg">
+                            <img class="icon_testimonial_left" src="_assets/img/icon_testimonial_left.png" alt="Testimonial">
+                            <img class="icon_testimonial_right" src="_assets/img/icon_testimonial_right.png" alt="Testimonial">
+                            <div class="testimonials">
+                                <div class="testimonial-wrapper">
+                                    <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam 
+                                        processus dynamicus, qui sequitur mutationem consuetudium lectorum.</p>
+                                    <cite>-David Bradley - NC</cite>
+                                </div>
+                                <div class="testimonial-wrapper" style="display: none;">
+                                    <p>Mauris lobortis ipsum magna. Integer auctor fringilla tellus sed aliquet. In egestas, lacus sed elementum hendrerit, leo urna sodales tortor.</p>
+                                    <cite>-Ashley Peacock - UK</cite>
+                                </div>
+                                <div class="testimonial-wrapper" style="display: none;">
+                                    <p>Mauris lobortis ipsum magna. Integer auctor fringilla tellus sed aliquet. In egestas, lacus sed elementum hendrerit, leo urna sodales tortor.</p>
+                                    <cite>-Another Person - IN</cite>
+                                </div>
+                                <div class="testimonial-wrapper" style="display: none;">
+                                    <p>In hac habitasse platea dictumst. Nullam nec ligula eget lorem tincidunt gravida non ac sem. Curabitur vel felis in metus aliquet iaculis at nec erat.</p>
+                                    <cite>-Final Pesron - JP</cite>
+                                </div>
+                            </div>
+                        </div><!--/white bg-->
+                    </div><!--/span12-->
+                </div>
+                <div class="row">
+                    <div class="span12 sign-up-home">
+                        <a class="blue-btn span5 offset3" href="contact.html">Contact us for a free quote today</a>
+                    </div><!--/span12-->
+
+                </div><!--/row-->
+            </div><!--/container-->
+        </div><!--/content-->
+
+        <div id="white-content">
+            <div class="container">
+                <div class="row">
+                    <div class="span2">
+                        <h5>News Articles</h5>
+                    </div><!--/span2-->
+                    <div class="span5">
+                        <div class="icon-box pull-left">
+                            <i class="icon-file"></i>
+                        </div><!--/icon box-->
+                        <div class="description">
+                            <h5><a href="#">We've updated our application to make it faster.</a></h5>
+                            <p class="muted"><i class="icon-calendar"></i>Oct. 17th, 2012 &nbsp; - &nbsp; 
+                                <i class=" icon-comment-alt"></i> <a class="muted" href="#">4 Comments</a></p>
+                        </div><!--/pull right-->
+                    </div><!--/span5-->
+                    <div class="span5">
+                        <div class="icon-box pull-left">
+                            <i class="icon-file"></i>
+                        </div><!--/icon box-->
+                        <div class="description">
+                            <h5><a href="#">Push comes to shove, we got it done in time.</a></h5>
+                            <p class="muted"><i class="icon-calendar"></i>Oct. 17th, 2012 &nbsp; - &nbsp; 
+                                <i class=" icon-comment-alt"></i> <a class="muted" href="#">4 Comments</a></p>
+                        </div><!--/pull right-->
+                    </div><!--/span5-->
+                </div><!--/row-->
+
+                <hr>
+
+                <div class="row">
+                    <div class="span2">
+                        <h5>Latest Tweets</h5>
+                    </div><!--/span2-->
+                    <div id="latest_tweets">
+
+                        <div id="jtwt3674" class="jtwt"><p style="display: none;" class="jtwt_loader muted">Loading Tweets...</p><div class="span5"><div class="icon-box pull-left"><i class="icon-twitter"></i></div><div class="description"><p>We also have several totally new themes on the way, the next one should be available sometime next week! <span class="muted">16 days ago</span></p></div></div><div class="span5"><div class="icon-box pull-left"><i class="icon-twitter"></i></div><div class="description"><p>Our Concrete5 theme, one of the first on ThemeForest, was released earlier this week. You can take a look at <a href="http://t.co/AHesNzHXds">http://t.co/AHesNzHXds</a> <span class="muted">16 days ago</span></p></div></div></div></div>
+                </div><!--/row-->
+            </div><!--/container-->
+        </div><!--/white content-->
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="span8">
+                        <p>&copy; Copyright 2013 DesignedByDash | All rights reserved</p>
+                    </div><!--/span8-->
+                    <div class="span4">
+                        <ul id="footer-nav">
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div><!--/span4-->
+                </div><!--/row-->
+            </div><!--/container-->
+        </div><!--/footer-->
+
+
+
+        <?php echo $this->headScript(); ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#layerslider').layerSlider({
+                    responsiveUnder: 980,
+                    sublayerContainer: 940,
+                    skinsPath: '_assets/js/layerslider/skins/',
+                    skin: 'fullwidth',
+                    thumbnailNavigation: 'hover',
+                    responsive: false,
+                    slideDirection: 'left',
+                    delayin: 1000
+                });
+            });
+        </script>
+
+    </body>
+</html>

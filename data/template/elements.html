@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Converts Responsive Theme - Elements</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!-- Bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="_assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="_assets/css/converts.css" rel="stylesheet" />
+		<link href="_assets/css/animate.css" rel="stylesheet" />
+		<link href="_assets/css/font-awesome.css" rel="stylesheet" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+        
+        <!--[if gte IE 9]>
+        <link type="text/css" rel="stylesheet" href="_assets/css/ie9-gradients.css" />
+        <![endif]-->
+        
+	</head>
+	<body>
+		<div id="header" class="animated bounceInDown">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<div class="container">
+									<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="brand pull-left" href="index.html"><img class="logo" src="_assets/img/logo.png" alt="Converts Logo"></a>
+									<div class="nav-collapse collapse">
+										<ul class="nav pull-right">
+											<li>
+												<a href="index.html">Home</a>
+											</li>
+											<li>
+												<a href="about.html">About</a>
+											</li>
+											<li>
+												<a href="blog.html">Blog</a>
+											</li>
+											<li class="dropdown">
+												<a id="drop" href="work.html" role="button" class="dropdown-toggle" data-toggle="dropdown">Work <b class="caret"></b></a>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+													<li><a tabindex="-1" href="work-4cols.html">4 Columns</a></li>
+													<li><a tabindex="-1" href="work-3cols.html">3 Columns</a></li>
+													<li><a tabindex="-1" href="work-2cols.html">2 Columns</a></li>
+													<li><a tabindex="-1" href="work-single.html">Single Work</a></li>
+												</ul>
+											</li>
+											<li class="dropdown active">
+												<a id="drop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Features <b class="caret"></b></a>
+												<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+													<li><a tabindex="-1" href="typography.html">Typography</a></li>
+													<li><a tabindex="-1" href="elements.html">Elements</a></li>
+													<li><a tabindex="-1" href="full-width.html">Full Width</a></li>
+													<li><a tabindex="-1" href="pricing-tables.html">Pricing Tables</a></li>
+													<li><a tabindex="-1" href="right-sidebar.html">Right Sidebar</a></li>
+													<li><a tabindex="-1" href="left-sidebar.html">Left Sidebar</a></li>
+													<li><a tabindex="-1" href="404.html">404 Page</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="contact.html">Contact</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--/span12-->
+				</div><!--/row-->
+			</div><!--/container-->
+		</div><!--/header-->
+		
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+                	<div id="inner_title">
+                        <h1>Elements Layout</h1>
+                        <span>Do some fun things.</span>
+                    </div><!--/inner title-->
+				</div><!--/span12-->
+			</div><!--/row-->
+		</div><!--/container-->
+		
+		<div id="content">
+			<div class="container">
+				<div class="row">
+                    <div class="span12">
+                        <p class="legend">Progress Bars</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+
+                        <h4>Stripped Bars</h4>
+                        <div class="progress progress-info progress-striped">
+                          <div class="bar" style="width: 20%"></div>
+                        </div>
+                        <div class="progress progress-success progress-striped">
+                          <div class="bar" style="width: 40%"></div>
+                        </div>
+                        <div class="progress progress-warning progress-striped">
+                          <div class="bar" style="width: 60%"></div>
+                        </div>
+                        <div class="progress progress-danger progress-striped">
+                          <div class="bar" style="width: 80%"></div>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="span6">
+                    
+                        <h4>Normal Bars</h4>
+                        
+                        <div class="progress progress-info">
+                          <div class="bar" style="width: 20%"></div>
+                        </div>
+                        <div class="progress progress-success">
+                          <div class="bar" style="width: 40%"></div>
+                        </div>
+                        <div class="progress progress-warning">
+                          <div class="bar" style="width: 60%"></div>
+                        </div>
+                        <div class="progress progress-danger">
+                          <div class="bar" style="width: 80%"></div>
+                        </div>
+                    
+                
+                    </div>
+				</div>
+				<div class="row">
+					<div class="span6">
+				
+                        <p class="legend">Tabbable Navs</p>
+                        <div class="tabbable"> <!-- Only required for left/right tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+                                <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                    Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+                                    Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+                                    convallis eget.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                    Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+                                    Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+                                    convallis eget.</p>
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+                                    Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+                                    Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+                                    convallis eget. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+                                    Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+                                    convallis eget.</p>
+                                </div>
+                            </div>
+                        </div>
+                	</div>
+				
+					<div class="span6">
+				
+                        <p class="legend">Accordian</p>
+                        
+                        <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                        Collapsible Group Item #1
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="accordion-body collapse in">
+                                    <div class="accordion-inner">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                        Collapsible Group Item #2
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                        Collapsible Group Item #3
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div><!--/span 6-->
+				</div>
+                
+                <div class="row">
+					<div class="span6">
+				
+						<p class="legend">Modal Box</p>
+				
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+				Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+				Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+				convallis eget.</p>
+				
+						<br>
+						<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; ">
+            				<div class="modal-header">
+              					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              					<h3 id="myModalLabel">Modal Heading</h3>
+            				</div>
+            				<div class="modal-body">
+              					<h4>Text in a modal</h4>
+	             				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
+	             Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. 
+	             Mauris ornare tempor nulla, vel sagittis diam convallis eget. Ut ultricies ornare dui, ac accumsan diam 
+	             convallis eget.</p>
+
+							</div>
+            				<div class="modal-footer">
+              					<button class="btn" data-dismiss="modal">Close</button>
+              					<button class="btn btn-primary">Save changes</button>
+            				</div>
+          				</div>
+					
+					<a data-toggle="modal" href="#myModal" class="blue-btn ie8-btn-fix">Launch demo modal</a>
+				
+					</div>
+				
+					<div class="span6">
+						<p class="legend">Slider</p>
+					
+						<div id="myCarousel" class="carousel slide opacity-fade">
+							<!-- Carousel items -->
+							<div class="carousel-inner">
+								<div class="active item"><img class="img-rounded" src="_assets/img/blog-slide.jpg" alt="three" /></div>
+								<div class="item"><img class="img-rounded" src="_assets/img/blog-slide2.jpg" alt="three" /></div>
+								<div class="item"><img class="img-rounded" src="_assets/img/blog-slide3.jpg" alt="three" /></div>
+							</div>
+							<!-- Carousel nav -->
+							<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+							<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+						</div><!--/my carousel-->
+				
+					</div><!--/span6-->
+				</div>
+
+			</div><!--/container-->
+			
+			<br>
+			
+		</div><!--/hero-->
+				
+		<div id="white-content">
+			<div class="container">
+				<div class="row">
+					<div class="span2">
+						<h5>News Articles</h5>
+					</div><!--/span2-->
+					<div class="span5">
+						<div class="icon-box pull-left">
+							<i class="icon-file"></i>
+						</div><!--/icon box-->
+						<div class="description">
+							<h5><a href="#">We've updated our application to make it faster.</a></h5>
+							<p class="muted"><i class="icon-calendar"></i>Oct. 17th, 2012 &nbsp; - &nbsp; 
+							<i class=" icon-comment-alt"></i> <a class="muted" href="#">4 Comments</a></p>
+						</div><!--/pull right-->
+					</div><!--/span5-->
+					<div class="span5">
+						<div class="icon-box pull-left">
+							<i class="icon-file"></i>
+						</div><!--/icon box-->
+						<div class="description">
+							<h5><a href="#">Push comes to shove, we got it done in time.</a></h5>
+							<p class="muted"><i class="icon-calendar"></i>Oct. 17th, 2012 &nbsp; - &nbsp; 
+							<i class=" icon-comment-alt"></i> <a class="muted" href="#">4 Comments</a></p>
+						</div><!--/pull right-->
+					</div><!--/span5-->
+				</div><!--/row-->
+				
+				<hr>
+				
+				<div class="row">
+					<div class="span2">
+						<h5>Latest Tweets</h5>
+					</div><!--/span2-->
+					<div id="latest_tweets">
+                        
+                    </div>
+				</div><!--/row-->
+			</div><!--/container-->
+		</div><!--/white content-->
+		
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="span8">
+						<p>&copy; Copyright 2013 DesignedByDash | All rights reserved</p>
+					</div><!--/span8-->
+					<div class="span4">
+						<ul id="footer-nav">
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">Privacy</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Pricing</a></li>
+						</ul>
+					</div><!--/span4-->
+				</div><!--/row-->
+			</div><!--/container-->
+		</div><!--/footer-->
+		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="_assets/js/bootstrap.min.js"></script>
+        
+        <!-- Latest Tweets -->
+        <script type="text/javascript" src="_assets/js/twitter.js"></script>
+        <script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('#latest_tweets').jtwt({
+				username: 'designedbydash',
+				count: '2',
+				loader_text: 'Loading Tweets...'
+			});
+		});
+		</script>
+</body>
+</html>
