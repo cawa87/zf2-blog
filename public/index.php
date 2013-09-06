@@ -16,5 +16,7 @@ require 'init_autoloader.php';
 //zf2-developers tolls
 //define('REQUEST_MICROTIME', microtime(true));
 
+define('BASE_DIR', dirname(__DIR__));
+
 // Run the application!
 Zend\Mvc\Application::init(require 'config/application.config.php')->run();

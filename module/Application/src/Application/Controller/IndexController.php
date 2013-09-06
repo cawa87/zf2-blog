@@ -18,8 +18,8 @@ class IndexController extends AbstractActionController
     {
         
         $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        $post = $em->find('Application\Entity\Post',1);
-        //dvar_dump($post);//die();
-        return new ViewModel();
+        //var_dump($em->getRepository('Application\Entity\BlogPostImages')->findByPost(1));die();
+        $posts = $em->getRepository('Application\Entity\BlogPost')->findAll();
+        return new ViewModel(['posts'=>$posts]);
     }
 }
