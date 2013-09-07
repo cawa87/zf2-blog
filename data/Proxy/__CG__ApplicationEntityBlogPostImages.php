@@ -42,18 +42,6 @@ class BlogPostImages extends \Application\Entity\BlogPostImages implements \Doct
     }
 
     
-    public function getBlogPost()
-    {
-        $this->__load();
-        return parent::getBlogPost();
-    }
-
-    public function setBlogPost($blogPost)
-    {
-        $this->__load();
-        return parent::setBlogPost($blogPost);
-    }
-
     public function getId()
     {
         if ($this->__isInitialized__ === false) {
@@ -90,7 +78,7 @@ class BlogPostImages extends \Application\Entity\BlogPostImages implements \Doct
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'path', 'post', 'blogPost');
+        return array('__isInitialized__', 'id', 'path', 'post');
     }
 
     public function __clone()

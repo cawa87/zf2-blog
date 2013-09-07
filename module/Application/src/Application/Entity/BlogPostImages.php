@@ -22,40 +22,21 @@ class BlogPostImages
     private $id;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="post_id", type="integer", nullable=false)
+     */
+    private $postId;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="path", type="string", length=255, nullable=false)
      */
     private $path;
 
-    /**
-     * @var \Application\Entity\BlogPost
-     *
-     * @ORM\ManyToOne(targetEntity="Application\Entity\BlogPost")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="post_id", referencedColumnName="id")
-     * })
-     */
-    private $post;
 
-    
-    /**
-     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPost", inversedBy="thumbnail")
-     * @ORM\JoinColumn()
-     */
-    private $blogPost;
 
-    
-    public function getBlogPost()
-    {
-        return $this->blogPost;
-    }
-
-    
-    public function setBlogPost($blogPost)
-    {
-        $this->blogPost = $blogPost;
-    }
     /**
      * Get id
      *
@@ -64,6 +45,29 @@ class BlogPostImages
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set postId
+     *
+     * @param integer $postId
+     * @return BlogPostImages
+     */
+    public function setPostId($postId)
+    {
+        $this->postId = $postId;
+    
+        return $this;
+    }
+
+    /**
+     * Get postId
+     *
+     * @return integer 
+     */
+    public function getPostId()
+    {
+        return $this->postId;
     }
 
     /**
@@ -87,28 +91,5 @@ class BlogPostImages
     public function getPath()
     {
         return $this->path;
-    }
-
-    /**
-     * Set post
-     *
-     * @param \Application\Entity\BlogPost $post
-     * @return BlogPostImages
-     */
-    public function setPost(\Application\Entity\BlogPost $post = null)
-    {
-        $this->post = $post;
-    
-        return $this;
-    }
-
-    /**
-     * Get post
-     *
-     * @return \Application\Entity\BlogPost 
-     */
-    public function getPost()
-    {
-        return $this->post;
     }
 }

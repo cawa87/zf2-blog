@@ -1,7 +1,7 @@
+<div class="row">
 <?php foreach ($posts as $post): ?>
-<div class="span3">
-    <?php //var_dump($post->getThubnail());//die(); ?>
-    <img alt="work" src="<?php //var_dump($expression) ?>">
+<div class="span4">
+    <img alt="work" src="<?php echo '/img/upload/'.$post->getThumbnail()->getPath().'.jpg' ?>">
     <div class="white-bg box-top-fix">
         <h5><?php echo $post->getTitle(); ?></h5>
         <p><?php echo substr($post->getText(),0,50); ?>...</p>
@@ -10,3 +10,4 @@
     </div><!--/work bg-->
 </div>
 <?php endforeach; ?>
+</div>

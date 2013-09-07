@@ -94,7 +94,7 @@ return array(
         'driver' => array(
             __NAMESPACE__ . '_driver' => array(
                 'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                'cache' => 'memcached',
+                'cache' => 'array',
                 'paths' => array(__DIR__ . '/../src/' . __NAMESPACE__ . '/Entity')
             ),
             'orm_default' => array(

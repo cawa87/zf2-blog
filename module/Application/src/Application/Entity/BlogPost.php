@@ -45,9 +45,23 @@ class BlogPost
     /**
      * @var integer
      *
+     * @ORM\Column(name="thumbnail_id", type="integer", nullable=false)
+     */
+    private $thumbnailId;
+
+    /**
+     * @var integer
+     *
      * @ORM\Column(name="comments", type="integer", nullable=false)
      */
     private $comments;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="categorie_id", type="integer", nullable=false)
+     */
+    private $categorieId;
 
     /**
      * @var \DateTime
@@ -56,11 +70,6 @@ class BlogPost
      */
     private $createdAt;
 
-    /**
-     * @var \Application\Entity\BlogPostImages
-     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages",mappedBy="blogPost")
-     */
-    private $thumbnail; 
 
 
     /**
@@ -143,6 +152,29 @@ class BlogPost
     }
 
     /**
+     * Set thumbnailId
+     *
+     * @param integer $thumbnailId
+     * @return BlogPost
+     */
+    public function setThumbnailId($thumbnailId)
+    {
+        $this->thumbnailId = $thumbnailId;
+    
+        return $this;
+    }
+
+    /**
+     * Get thumbnailId
+     *
+     * @return integer 
+     */
+    public function getThumbnailId()
+    {
+        return $this->thumbnailId;
+    }
+
+    /**
      * Set comments
      *
      * @param integer $comments
@@ -166,6 +198,29 @@ class BlogPost
     }
 
     /**
+     * Set categorieId
+     *
+     * @param integer $categorieId
+     * @return BlogPost
+     */
+    public function setCategorieId($categorieId)
+    {
+        $this->categorieId = $categorieId;
+    
+        return $this;
+    }
+
+    /**
+     * Get categorieId
+     *
+     * @return integer 
+     */
+    public function getCategorieId()
+    {
+        return $this->categorieId;
+    }
+
+    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -186,27 +241,5 @@ class BlogPost
     public function getCreatedAt()
     {
         return $this->createdAt;
-    }
-
-    /**
-     * Set preview
-     *
-     * @param integer $preview
-     * @return BlogPost
-     */
-    public function setThumbnail($thumbnail)
-    {
-        $this->thumbnail = $thumbnail;
-        return $this;
-    }
-
-    /**
-     * Get preview
-     *
-     * @return \Application\Entity\BlogPostImages 
-     */
-    public function getThumbnail()
-    {
-        return $this->thumbnail;
     }
 }
