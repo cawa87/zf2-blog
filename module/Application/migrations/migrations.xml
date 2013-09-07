@@ -4,9 +4,9 @@
       xsi:schemaLocation="http://doctrine-project.org/schemas/migrations/configuration
                     http://doctrine-project.org/schemas/migrations/configuration.xsd">
 
-    <name>Doctrine Migrations</name>
-    <migrations-namespace>Application\Migrations</migrations-namespace>
-    <table name="zf2_blog_migration_version" />
+    <name>Zf2-Blog Migrations</name>
+    <migrations-namespace>Migrations</migrations-namespace>
+    <table name="zf2_blog_migration" />
     <migrations-directory>.</migrations-directory>
 
 </doctrine-migrations>

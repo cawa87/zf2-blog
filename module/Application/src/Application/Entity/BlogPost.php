@@ -71,7 +71,6 @@ class BlogPost
     private $createdAt;
 
 
-
     /**
      * Get id
      *
