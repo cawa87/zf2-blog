@@ -1,0 +1,31 @@
+.body { direction: rtl }
+.logo, .meta { float: right }
+.sf-menu { float: left; margin: 20px 0 0 0 }
+.sf-menu li { float: right;text-align: right }
+.sf-menu a { padding: 0 0 30px 40px }
+.little-head { float: left }
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {right: 0px;left: auto}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul, .sf-menu li:hover ul li ul, .sf-menu li.sfHover ul li ul, .sf-menu li:hover ul li ul li ul, .sf-menu li.sfHover ul li ul li ul {right: 172px;left: auto;}
+.little-head .search button, .widget #searchwidget button, #newsletters button {left: 12px;right: auto}
+.sf-menu i, .post .post-title i, .mi {margin-left: 8px;margin-right: 0}
+.sf-sub-indicator i {margin-left: 0;margin-right: 8px}
+.breadcrumbIn li:before {content: "\f104";right: -4px;left: auto;}
+.post .Rmore, .like-post {float: left;}
+.post .meta span, .news-meta .meta span {margin-right: 0;margin-left: 20px;}
+#popupLoginClose {left: 33px;right: auto;}
+.tags i { margin-left: 4px; margin-right: 0 }
+.tab-content-items .m-thumbnail {float: right;margin: 0 0 0 10px;}
+.mtracks > .pane {left: 0;right: auto;}
+.videos .flex-direction-nav .flex-prev {left: 0;right: auto;}
+.videos .flex-direction-nav .flex-next {left: 18px;right: auto;}
+.copyright {float: right;}
+.foot-menu, .buy-ticket, .news .tbutton {float: left}
+#toTop, .pagination-tt .pages {float: left;}
+#toTop i {padding: 3px 5px 0 0;}
+.tab-content-items li:hover .m-thumbnail {padding: 0 10px 0 0;}
+.ttw-music-player {direction: ltr;}
+.mitem h3 {left: auto;right: 28px;}
+.mitem .cat {right: auto;left: 10px;}
+.pagination-tt ul {float: right;}
+#mobilepro {float: left}
+.sf-menu li li a {padding: 8px 20px}
