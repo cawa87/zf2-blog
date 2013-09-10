@@ -63,29 +63,30 @@ class Module
                                        ->setName('viewport', 'width=device-width, initial-scale=1.0');
         
         $helperManager->get('headtitle')->set('Zf2 blog system')->setSeparator(' - ')->setAutoEscape(false);
-        
-        
-        $helperManager->get('headlink')
-                        ->appendStylesheet('/_assets/css/bootstrap.min.css')
-                        ->appendStylesheet('/css/main.css')
-                        ->appendStylesheet('/_assets/css/converts.css')
-                        ->appendStylesheet('/_assets/css/animate.css')
-                        ->appendStylesheet('/_assets/css/font-awesome.css')
-                        ->appendStylesheet('//fonts.googleapis.com/css?family=Patua+One')
-                        ->appendStylesheet('//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic')
-                        ->appendStylesheet('/_assets/js/layerslider/css/layerslider.css');
 
+        $helperManager->get('headlink')
+                        ->appendStylesheet('/css/bootstrap.min.css')
+                        ->appendStylesheet('/css/bootstrap-responsive.min.css')
+                        ->appendStylesheet('/css/style.css')
+                        ->appendStylesheet('/css/main.css')
+                        ->appendStylesheet('/js/rs-plugin/css/settings.css')
+                        ->appendStylesheet('//fonts.googleapis.com/css?family=Oswald')
+                        ->appendStylesheet('/css//icons/icons.css');
         
         $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
                                          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
-                                         ->appendFile('/js/bootstrap.js')
-                                         ->appendFile('/js/main.js')
-                                         ->appendFile('/js/admin.js')
-                                         ->appendFile('/_assets/js/twitter.js')
-                                         ->appendFile('/_assets/js/layerslider/jQuery/jquery-easing-1.3.js')
-                                         ->appendFile('/_assets/js/layerslider/jQuery/jquery-transit-modified.js')
-                                         ->appendFile('/_assets/js/layerslider/js/layerslider.transitions.js')
-                                         ->appendFile('/_assets/js/layerslider/js/layerslider.kreaturamedia.jquery.js');
+                                         ->appendFile('/js/jquery.min.js')
+                                         ->appendFile('/js/theme20.js')
+                                         ->appendFile('/js/bootstrap.min.js')
+                                         ->appendFile('/js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js')
+                                         ->appendFile('/js/rs-plugin/js/jquery.themepunch.revolution.min.js')
+                                         ->appendFile('/js/jquery.prettyPhoto.js')
+                                         ->appendFile('/js/jquery.flexslider-min.js')
+                                         ->appendFile('/js/jquery.jplayer.js')
+                                         ->appendFile('/js/jquery.nanoscroller.js')
+                                         ->appendFile('/js/twitter/jquery.tweet.js')
+                                         ->appendFile('/js/jquery.prettyPhoto.js')
+                                         ->appendFile('/js/custom.js');
                                   
 
         

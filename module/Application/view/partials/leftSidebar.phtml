@@ -1,18 +1,35 @@
-<div class="sidebar-wrap">
-    <h5>Categories</h5>
-    <ul class="cats">
-        <li><a href="typography.html">Typography</a></li>
-        <li><a href="elements.html">Elements</a></li>
-        <li><a href="full-width.html">Full Width</a></li>
-        <li><a href="pricing-tables.html">Pricing Tables</a></li>
-        <li><a href="right-sidebar.html">Right Sidebar</a></li>
-        <li><a href="left-sidebar.html">Left Sidebar</a></li>
-        <li><a href="404.html">404 Page</a></li>
-    </ul>
-</div><!--/sidebar wrap-->
+<div class="span4">
+    <div class="def-block widget animtt" data-gen="fadeUp" style="opacity:0;">
+        <h4> Главное меню </h4><span class="liner"></span>
+        <div class="widget-content row-fluid">
+            <ul class="nav nav-list">
+                <li><a href="index"><i class="icon-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="icon-edit"></i> Add Blog Post</a></li>
+                <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
+                <li><a href="#"><i class="icon-user"></i> Members</a></li>
+                <li><a href="#"><i class="icon-comment"></i> Comments</a></li>
+                <li><a href="#"><i class="icon-picture"></i> Gallery</a></li>
+            </ul>
+        </div><!-- widget content -->
+    </div><!-- side menu -->
+    <?php
+    // rand tags
+    $tags = ['label-important' => 0, 'label-inverse' => 1, 'label-success' => 2, 'label-warning' => 3];
+    ?>
+    <div class="def-block widget animtt" data-gen="fadeUp" style="opacity:0;">
+        <h4> Популярные теги </h4><span class="liner"></span>
+        <div class="widget-content row-fluid">
+            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
+            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
+            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
+            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
+        </div><!-- widget content -->
+    </div><!-- side tags -->
+    <!-- Put this script tag to the <head> of your page -->
+    <div class="def-block widget animtt" data-gen="fadeUp" style="opacity:0;">
+        <h4> Коментарии </h4><span class="liner"></span>
+        <div class="widget-content row-fluid">
 
-<div class="sidebar-wrap">
-    <h5>Text Blurb</h5>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempus eleifend risus ut congue. 
-        Pellentesque nec lacus elit.</p>
-</div><!--/sidebar wrap-->
+        </div>
+    </div>
+</div><!-- span4 sidebar -->

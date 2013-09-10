@@ -1,4 +1,8 @@
 <?php echo $this->doctype(); ?>
+<!--[if IE 7 ]><html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" xmlns="http://www.w3.org/1999/xhtml" lang="en-US"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
 <html lang="ru">
     <head>
         <meta charset="utf-8">
@@ -6,65 +10,75 @@
         <?php echo $this->headMeta() ?>
 
         <?php echo $this->headLink(); ?>
-        <!--[if lt IE 9]>
+        <!--[if IE]>
+                <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->    
-        <!--[if gte IE 9]>
-      <link type="text/css" rel="stylesheet" href="_assets/css/ie9-gradients.css" />
-      <![endif]-->
+                <link rel="stylesheet" type="text/css" href="styles/icons/font-awesome-ie7.min.css" />
+        <![endif]-->
     </head>
-    <body>
+    <body id="fluidGridSystem">
+        <div id="layout" class="full">
 
-        <?php echo $this->partial('partials/navigation'); ?>
+            <?php echo $this->partial('partials/header'); ?>
+            <!-- Start Revolution Slider -->
+            <?php if ($this->controllerName() == 'Application\Controller\Index'): ?>
+                <?php echo $this->partial('partials/slider'); ?>
+            <?php else : ?>
+                <div class="under_header"><img src="/img/assets/breadcrumbs12.png" alt="#"></div><!-- under header -->
 
-        <div id="hero">
-            <?php if ($this->controllerName() == 'Application\Controller\Index') {
-                echo $this->partial('partials/slider');
-            } ?>
+            <?php endif; ?>
+            <!-- End Revolution Slider -->
 
-        </div><!--/hero-->
-        <div id="callout">
-            <div class="container">
-                <div class="pull-left">
-                    <h4>Есть много вариантов Lorem Ipsum</h4>
-                    <p>Если вам нужен Lorem Ipsum для серьёзного проекта.</p>               </div>
-                <div class="pull-right">
-                    <a class="blue-btn ie8-btn-fix" href="#">Согласен</a>
-                </div>
-            </div>
-        </div>
-        <div id="content">
-            <div class="container">
-                <div class="row">
-                       <div class="span9">
-                    <?php echo $this->content; ?>
-                           </div>
-                <div class="span3">
+            <div class="page-content">
+
+                <div class="row row-fluid clearfix mbf">
+                    <div class="span8">
+                        <div class="def-block">
+                            <h4> Последние записи </h4><span class="liner"></span>
+
+                            <?php echo $this->content; ?>
+
+                            <div class="load-news tac"><a href="#" class="tbutton small"><span>Load More</span></a></div>
+                        </div><!-- def block -->
+                    </div><!-- span8 news -->
+
                     <?php echo $this->partial('partials/leftSidebar'); ?>
-                </div>
-                   </div> 
-            </div><!--/container-->
-        </div><!--/content-->
 
-        <?php echo $this->partial('partials/footer'); ?>
+                </div><!-- row clearfix -->
 
-<?php echo $this->headScript(); ?>
+            </div><!-- end page content -->
 
-        <!-- slider settings-->
+            <?php echo $this->partial('partials/footer'); ?>
+
+        </div><!-- end layout -->
+        <!-- Scripts -->
+        <?php echo $this->headScript(); ?>
         <script type="text/javascript">
-            jQuery(document).ready(function() {
-                jQuery('#layerslider').layerSlider({
-                    responsiveUnder: 980,
-                    sublayerContainer: 940,
-                    skinsPath: '_assets/js/layerslider/skins/',
-                    skin: 'fullwidth',
-                    thumbnailNavigation: 'hover',
-                    responsive: false,
-                    slideDirection: 'left',
-                    delayin: 1000
+            /* <![CDATA[ */
+            var tpj = jQuery;
+            tpj.noConflict();
+            tpj(document).ready(function() {
+                if (tpj.fn.cssOriginal != undefined)
+                    tpj.fn.css = tpj.fn.cssOriginal;
+                var api = tpj('.revolution').revolution({
+                    delay: 9000,
+                    startheight: 380,
+                    startwidth: 960,
+                    hideThumbs: 200,
+                    thumbWidth: 80,
+                    thumbHeight: 50,
+                    thumbAmount: 5,
+                    navigationType: "none",
+                    navigationArrows: "verticalcentered",
+                    navigationStyle: "square",
+                    touchenabled: "on",
+                    onHoverStop: "on",
+                    navOffsetHorizontal: 0,
+                    navOffsetVertical: 20,
+                    shadow: 0
                 });
             });
+            /* ]]> */
         </script>
-
     </body>
 </html>
