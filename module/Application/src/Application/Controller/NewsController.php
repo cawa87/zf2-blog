@@ -21,8 +21,12 @@ class NewsController extends AbstractController
         
         $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
         $posts = $em->getRepository('Application\Entity\BlogPost')->findByCategorieId($categorieId);
-        $categorie = $em->getRepository('Application\Entity\Categories')->find($categorieId);
- 
+        if($categorieId){
+        $categorie = $em->getRepository('Application\Entity\Categories')->find($categorieId);}
+        else{
+            $categorie = $em->getRepository('Application\Entity\Categories')->findAll();
+        }
+        //var_dump($categorie); die();
         return new ViewModel(['posts'=>$posts,'categorie'=>$categorie]);
     }
 }

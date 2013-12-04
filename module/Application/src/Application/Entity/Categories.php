@@ -17,7 +17,7 @@ class Categories implements \Zend\Stdlib\JsonSerializable
     use JsonSerializeble,
         OffsetSet;
 
-    /**
+   /**
      * @var integer
      *
      * @ORM\Column(name="id", type="integer", nullable=false)
