@@ -3,6 +3,8 @@
 namespace Application\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Application\Traits\JsonSerializeble;
+use Application\Traits\OffsetSet;
 
 /**
  * BlogPost
@@ -10,8 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="blog_post")
  * @ORM\Entity
  */
-class BlogPost
+class BlogPost implements \Zend\Stdlib\JsonSerializable
 {
+
+    use JsonSerializeble,
+        OffsetSet;
+
     /**
      * @var integer
      *
@@ -50,6 +56,13 @@ class BlogPost
     private $thumbnailId;
 
     /**
+     * @var \Application\Entity\TestInfo
+     *
+     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages")
+     */
+    private $thumbnail;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="comments", type="integer", nullable=false)
@@ -70,7 +83,6 @@ class BlogPost
      */
     private $createdAt;
 
-
     /**
      * Get id
      *
@@ -90,7 +102,7 @@ class BlogPost
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
 
@@ -113,7 +125,7 @@ class BlogPost
     public function setText($text)
     {
         $this->text = $text;
-    
+
         return $this;
     }
 
@@ -136,7 +148,7 @@ class BlogPost
     public function setAuthorId($authorId)
     {
         $this->authorId = $authorId;
-    
+
         return $this;
     }
 
@@ -159,7 +171,7 @@ class BlogPost
     public function setThumbnailId($thumbnailId)
     {
         $this->thumbnailId = $thumbnailId;
-    
+
         return $this;
     }
 
@@ -174,6 +186,16 @@ class BlogPost
     }
 
     /**
+     * Get thumbnail
+     *
+     * @return path
+     */
+    public function getThumbnail()
+    {
+        return $this->thumbnail;
+    }
+
+    /**
      * Set comments
      *
      * @param integer $comments
@@ -182,7 +204,7 @@ class BlogPost
     public function setComments($comments)
     {
         $this->comments = $comments;
-    
+
         return $this;
     }
 
@@ -205,7 +227,7 @@ class BlogPost
     public function setCategorieId($categorieId)
     {
         $this->categorieId = $categorieId;
-    
+
         return $this;
     }
 
@@ -228,7 +250,7 @@ class BlogPost
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-    
+
         return $this;
     }
 
@@ -241,4 +263,5 @@ class BlogPost
     {
         return $this->createdAt;
     }
+
 }

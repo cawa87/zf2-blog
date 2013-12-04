@@ -1,0 +1,28 @@
+2013/11/20 13:35:37 [error] 7586#0: *602 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Call to a member function getSQL() on a non-object in /home/cawa/www/zf2-blog/module/Application/src/Application/Controller/IndexController.php on line 20
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. Zend\Mvc\Application->run() /home/cawa/www/zf2-blog/public/index.php:22
+PHP message: PHP   3. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:310
+PHP message: PHP   4. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP   5. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   6. Zend\Mvc\DispatchListener->onDispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+PHP message: PHP   8. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+PHP message: PHP   9. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP  10. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP  12. Application\Controller\IndexController->indexAction() /home/
+2013/11/20 13:35:49 [error] 7586#0: *602 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Call to a member function getSQL() on a non-object in /home/cawa/www/zf2-blog/module/Application/src/Application/Controller/IndexController.php on line 21
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. Zend\Mvc\Application->run() /home/cawa/www/zf2-blog/public/index.php:22
+PHP message: PHP   3. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:310
+PHP message: PHP   4. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP   5. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   6. Zend\Mvc\DispatchListener->onDispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   7. Zend\Mvc\Controller\AbstractController->dispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/DispatchListener.php:114
+PHP message: PHP   8. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+PHP message: PHP   9. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP  10. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP  12. Application\Controller\IndexController->indexAction() /home/

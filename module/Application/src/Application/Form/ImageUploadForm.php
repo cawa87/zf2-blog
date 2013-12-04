@@ -4,7 +4,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace Application\Form\Upload;
+namespace Application\Form;
 /**
  * Description of ImageUploadForm
  *
@@ -61,7 +61,7 @@ class ImageUploadForm extends Form
         
          $fileInput->getValidatorChain()
             ->attachByName('filesize',      array('max' => 204800))
-            //->attachByName('filemimetype',  array('mimeType' => 'image/png,image/jpg,image/jpeg'))
+            ->attachByName('filemimetype',  array('mimeType' => ['image/png','image/jpg','image/jpeg']))
             ->attachByName('fileimagesize', array('maxWidth' => 2000, 'maxHeight' => 2000));
 
         // All files will be renamed, i.e.:

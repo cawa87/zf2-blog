@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Test
  *
- * @ORM\Table(name="test")
+ * @ORM\Table(name="test", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_D87F7E0C1E5D0459", columns={"test_id"})})
  * @ORM\Entity
  */
 class Test
@@ -21,17 +21,13 @@ class Test
      */
     private $id;
 
-   /** 
-     @ORM\Column(name="test_id", type="integer", nullable=false)
-    *
-    */
-    private $test_id;
-    
     /**
      * @var \Application\Entity\TestInfo
      *
-     * @ORM\OneToOne(targetEntity="Application\Entity\TestInfo")
-     * @ORM\JoinColumn()
+     * @ORM\ManyToOne(targetEntity="Application\Entity\TestInfo")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="test_id", referencedColumnName="id")
+     * })
      */
     private $test;
 
@@ -48,34 +44,6 @@ class Test
     }
 
     /**
-     * Set testId
-     *
-     * @param integer $testId
-     * @return Test
-     */
-    public function setTestId($testId)
-    {
-        $this->testId = $testId;
-    
-        return $this;
-    }
-
-    /**
-     * Get testId
-     *
-     */
-    public function getTest()
-    {
-        return $this->test;
-    }
-    
-    
-    public function getTestId() 
-    {
-        return $this->test_id;
-    }
-
-    /**
      * Set test
      *
      * @param \Application\Entity\TestInfo $test
@@ -84,7 +52,17 @@ class Test
     public function setTest(\Application\Entity\TestInfo $test = null)
     {
         $this->test = $test;
-    
+
         return $this;
+    }
+
+    /**
+     * Get test
+     *
+     * @return \Application\Entity\TestInfo 
+     */
+    public function getTest()
+    {
+        return $this->test;
     }
 }

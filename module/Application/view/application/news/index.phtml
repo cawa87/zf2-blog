@@ -1,0 +1,14 @@
+<h4><?php echo $categorie->getCategorieName(); ?></h4><span class="liner"></span>
+<?php foreach ($posts as $post): ?>
+<div class="post row-fluid clearfix">
+    <a href="#"><img alt="work" src="<?php echo '/img/upload/' . $post->getThumbnail()->getPath() . '.jpg' ?>" style=" max-width:100%; width: 100%;"></a>
+    <h3 class="post-title"> <i class="icon-pencil"></i><a href="#"><?php echo $post->getTitle(); ?></a> </h3>
+    <p class="shorter_desc"><?php echo $post->getText(); ?></p>
+    <div class="meta">
+        <span> <i class="icon-user mi"></i> Admin </span>
+        <span> <i class="icon-time mi"></i><?php echo $post->getCreatedAt()->format("F j, Y, g:i a"); ?></span>
+        <span> <a href="#"><i class="icon-comments-alt"></i> 4 Comments</a> </span>
+    </div><!-- meta -->
+    <a class="Rmore tbutton small" href="news_single.html"><span>Read More</span></a>
+</div>
+<?php endforeach; ?>

@@ -1,0 +1,33 @@
+<?php echo $this->doctype(); ?>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink(); ?>
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->    
+        <!--[if gte IE 9]>
+      <link type="text/css" rel="stylesheet" href="_assets/css/ie9-gradients.css" />
+      <![endif]-->
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="navbar">
+                <?php echo $this->partial('partials/mainmenu'); ?>
+            </div>
+            <div class="row">
+                <div class="span3">
+                    <?php echo $this->partial('partials/sidemenu'); ?>
+                </div>
+                <div class="span9">
+
+                    <?php echo $content; ?>
+                </div>
+            </div>
+        </div>
+        <?php echo $this->headScript(); ?>
+    </body>
+</html>

@@ -28,7 +28,7 @@ class TestInfo
      */
     private $text;
 
-    
+
 
     /**
      * Get id
@@ -49,7 +49,7 @@ class TestInfo
     public function setText($text)
     {
         $this->text = $text;
-    
+
         return $this;
     }
 

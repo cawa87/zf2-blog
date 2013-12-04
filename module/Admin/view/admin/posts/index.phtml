@@ -1,0 +1,130 @@
+<div class="span9">
+    <h1>
+        Blog posts
+    </h1>
+    <?php
+
+    use Zend\Mvc\Controller\Plugin\FlashMessenger;
+
+$messenger = $this->flashMessenger()->getPluginFlashMessenger();
+    foreach (array(
+FlashMessenger::NAMESPACE_ERROR,
+ FlashMessenger::NAMESPACE_SUCCESS,
+ FlashMessenger::NAMESPACE_INFO,
+ FlashMessenger::NAMESPACE_DEFAULT)
+    as $namespace):
+
+        $messenger->setNamespace($namespace);
+        $userMsgs = array_merge($messenger->getCurrentMessages(), $messenger->getMessages());
+        $messenger->clearCurrentMessages();
+
+        foreach ($userMsgs as $msg):
+            $msgText = $msg;
+            if (is_array($msg)) {
+                $msgText = $msg['message'];
+            }
+            ?>
+            <div class="alert alert-<?= $namespace ?>">
+                <?= $msgText ?>
+            </div>
+        <?php endforeach ?>
+    <?php endforeach ?>
+    <div class="btn-group">
+        <a href="<?php
+        echo $this->url('admin', ['controller' => 'categories',
+            'action' => 'create']);
+        ?>" data-toggle="modal" data-target="#categorieEditModal" class="btn"><i class="icon-plus"></i></a>
+        <a class="btn">Right</a>
+    </div>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Text
+                </th>
+                <th>
+                    Categorie
+                </th>
+                <th>
+                    Created
+                </th>
+                <th>
+                    &nbsp;
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($posts as $post): ?>
+                <tr>
+                    <td>
+                        <?php echo $post->getId(); ?>
+                    </td>
+                    <td>
+                        <?php echo $post->getTitle(); ?>
+                    </td>
+                    <td>
+                        <?php echo substr($post->getText(), 0, 100); ?>
+                    </td>
+                    <td>
+                        <?php echo $post->getCategorieId(); ?>
+                    </td>
+                    <td>
+                        <?php echo $post->getCreatedAt()->format('Y-m-d H:i'); ?>
+                    </td>
+                    <td>
+                        <a href="<?php
+                        echo $this->url('admin', ['controller' => 'categories',
+                            'action' => 'get',
+                            'id' => $post->getId()]);
+                        ?>" data-toggle="modal" data-target="#categorieEditModal"><i class="icon-edit"></i></a>
+                        <a href="<?php
+                        echo $this->url('admin', ['controller' => 'categories',
+                            'action' => 'delete',
+                            'id' => $post->getId()]);
+                        ?>"><i class="icon-trash"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>				
+    <div class="pagination">
+        <ul>
+            <li class="disabled">
+                <a href="#">&laquo;</a>
+            </li>
+            <li class="active">
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">&raquo;</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="modal fade hide" id="postEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h2>Edit post</h2>
+    </div>
+    <div class="modal-body">
+    </div>
+
+</div>

@@ -11,7 +11,6 @@
  * @author Cawa
  */
 
-
 namespace Application\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
@@ -19,7 +18,7 @@ use Zend\View\Helper\AbstractHelper;
 class ControllerName extends AbstractHelper
 {
 
-protected $routeMatch;
+    protected $routeMatch;
 
     public function __construct($routeMatch)
     {
@@ -28,7 +27,12 @@ protected $routeMatch;
 
     public function __invoke()
     {
-        $controller = $this->routeMatch->getParam('controller', 'index');
-        return $controller;
+        if ($this->routeMatch) {
+            $controller = $this->routeMatch->getParam('controller');
+            return $controller;
+        }else{
+            return null;
+        }
     }
+
 }

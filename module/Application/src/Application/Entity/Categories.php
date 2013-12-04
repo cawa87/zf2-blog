@@ -3,15 +3,20 @@
 namespace Application\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Application\Traits\JsonSerializeble;
+use Application\Traits\OffsetSet;
 /**
  * Categories
  *
  * @ORM\Table(name="categories")
  * @ORM\Entity
  */
-class Categories
+class Categories implements \Zend\Stdlib\JsonSerializable
 {
+
+    use JsonSerializeble,
+        OffsetSet;
+
     /**
      * @var integer
      *
@@ -27,8 +32,6 @@ class Categories
      * @ORM\Column(name="categorie_name", type="string", length=50, nullable=false)
      */
     private $categorieName;
-
-
 
     /**
      * Get id
@@ -49,7 +52,7 @@ class Categories
     public function setCategorieName($categorieName)
     {
         $this->categorieName = $categorieName;
-    
+
         return $this;
     }
 
@@ -62,4 +65,16 @@ class Categories
     {
         return $this->categorieName;
     }
+
+    /**
+     * getArrayCopy function.
+     *
+     * @access public
+     * @return array
+     */
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
+
 }

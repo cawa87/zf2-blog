@@ -34,8 +34,9 @@
                 <div class="row row-fluid clearfix mbf">
                     <div class="span8">
                         <div class="def-block">
-                            <h4> Последние записи </h4><span class="liner"></span>
-
+                            <?php if ($this->controllerName() == 'Application\Controller\Index'): ?>
+                                <h4> Последние записи </h4><span class="liner"></span>
+                            <?php endif; ?>
                             <?php echo $this->content; ?>
 
                             <div class="load-news tac"><a href="#" class="tbutton small"><span>Load More</span></a></div>
@@ -61,7 +62,7 @@
                 if (tpj.fn.cssOriginal != undefined)
                     tpj.fn.css = tpj.fn.cssOriginal;
                 var api = tpj('.revolution').revolution({
-                    delay: 9000,
+                    delay: 4000,
                     startheight: 380,
                     startwidth: 960,
                     hideThumbs: 200,
@@ -72,7 +73,7 @@
                     navigationArrows: "verticalcentered",
                     navigationStyle: "square",
                     touchenabled: "on",
-                    onHoverStop: "on",
+                    onHoverStop: "off",
                     navOffsetHorizontal: 0,
                     navOffsetVertical: 20,
                     shadow: 0

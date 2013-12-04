@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	padding: 0;
 	margin: 0 0 10px 0;
-	font-family: "Oswald", Tahoma, Arial;
+	font-family:'Open Sans Condensed', sans-serif;
 	font-weight: bold;
 	line-height: 1;
 	text-transform: uppercase;
@@ -360,7 +360,7 @@ textarea {
 	float: right;
 }
 .tbutton {
-	font-family:Oswald, Tahoma, Helvetica;
+	font-family:'Open Sans Condensed', Tahoma, Helvetica;
 	display:inline-block;
 	cursor:pointer;
 	position:relative;
@@ -523,7 +523,7 @@ textarea {
 	padding: 15px 0 0;
 	position: relative;
 	margin: 20px 0 0 -20px;
-	font-family: 'Oswald', Tahoma;
+	font-family: 'Open Sans Condensed', Tahoma;
 }
 .sf-menu ul {
 	position: absolute;
@@ -701,7 +701,7 @@ a > .sf-sub-indicator {
 	font-size: 10px;
 	color: #868686;
 	cursor: default;
-	width: 134px;
+	width: 220px;
 	height: 24px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -716,7 +716,7 @@ a > .sf-sub-indicator {
 	padding: 0px 12px 0;
 }
 .little-head .search input:focus {
-	width: 160px;
+	width: 220px;
 	box-shadow: none;
 	background: #fff;
 	background: transparent url(images/ie_fff_80.png) repeat;
@@ -1354,7 +1354,7 @@ li.track:hover .buy, .playing .buy {
 	float: left;
 }
 .event-date, .event-month {
-	font-family: 'Oswald', Impact, Tahoma;
+	font-family: 'Open Sans Condensed', Impact, Tahoma;
 	display: block;
 	text-transform: uppercase;
 }
@@ -4367,7 +4367,8 @@ a.notification-close {
 	list-style-type:disc!important;
 }
 #evcal_list .eventon_list_event .event_description li{padding-bottom:10px}
-.evcal_event_details .evcal_evdata_cell.shorter_desc{height:150px; overflow:hidden;	}
+.evcal_event_details .evcal_evdata_cell.shorter_desc{height:150px; overflow:hidden;}
+.post .shorter_desc{color:white; font-size: 14px; background-color: #272A2D; border: 1px solid white; padding: 5px;}
 .evcal_event_details .evcal_evdata_cell{position:relative}
 .evcal_event_details .evcal_evdata_cell .eventon_details_shading_bot{
 	position:absolute;
@@ -4488,7 +4489,7 @@ a.notification-close {
 	margin: 0;
 	text-transform: uppercase;
 	font-size: 13px;
-	font-family: oswald, 'arial narrow';
+	font-family: 'Open Sans Condensed', 'arial narrow';
 }
 .evo_fc_widget .eventon_fullcal .eventon_fc_daynames .evo_fc_day{
 	visibility:hidden; display:block;
@@ -4563,7 +4564,7 @@ a.notification-close {
 }
 .ie8 .widget #searchwidget input, .ie8 #newsletters input, .ie8 #commentform input, .ie8 #loginform #input-i, .ie8 .forum #search-forum input,
 .ie8 #contactForm #senderName, .ie8 #contactForm #senderEmail, .ie8 #contactForm #message {
-	padding: 8px 12px 26px;	
+	padding: 8px 12px 40px;	
 }
 .ie8 .widget .list li a, .ie8 .post {
 	border-bottom: 1px solid #141414;
@@ -4749,7 +4750,7 @@ a.notification-close {
 	.social a {margin: 0 2px}
 	#header {position: relative;background: rgba(0, 0, 0, 0.4)}
 	.little-head .search, .social-head {margin: 0 10px 0 0}
-	.little-head .search input {font-size: 8px;width: 100px !important}
+	.little-head .search input {font-size: 8px;width: 100px !important;}
 	.little-head {float: none !important;display: table;margin: 0 auto}
 	#mobilepro { display: block; }
 	.sf-menu a { color: #FFF !important; padding: 0 0 10px 0 }

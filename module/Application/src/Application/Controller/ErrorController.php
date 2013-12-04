@@ -10,10 +10,10 @@
 
 namespace Application\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Application\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
 
-class ErrorController extends AbstractActionController
+class ErrorController extends AbstractController 
 {
     public function indexAction()
     {

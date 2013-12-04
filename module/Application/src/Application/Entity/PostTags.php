@@ -22,11 +22,11 @@ class PostTags
     private $id;
 
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="tag", type="string", length=30, nullable=false)
+     * @ORM\Column(name="tag_id", type="integer", nullable=false)
      */
-    private $tag;
+    private $tagId;
 
     /**
      * @var integer
@@ -48,26 +48,26 @@ class PostTags
     }
 
     /**
-     * Set tag
+     * Set tagId
      *
-     * @param string $tag
+     * @param integer $tagId
      * @return PostTags
      */
-    public function setTag($tag)
+    public function setTagId($tagId)
     {
-        $this->tag = $tag;
-    
+        $this->tagId = $tagId;
+
         return $this;
     }
 
     /**
-     * Get tag
+     * Get tagId
      *
-     * @return string 
+     * @return integer 
      */
-    public function getTag()
+    public function getTagId()
     {
-        return $this->tag;
+        return $this->tagId;
     }
 
     /**
@@ -79,7 +79,7 @@ class PostTags
     public function setPostId($postId)
     {
         $this->postId = $postId;
-    
+
         return $this;
     }
 

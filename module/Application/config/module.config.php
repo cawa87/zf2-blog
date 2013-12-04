@@ -39,7 +39,21 @@ return array(
                         'action' => 'index',
                     ),
                 ),
+            ),
+             'categorie' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/news[/:categorie]',
+                    'constraints' => array(
+                        'categorie' => '[0-9_-]*/?',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\News',
+                        'action' => 'index',
+                    ),
+                ),
             )
+            
         ),
     ),
     'service_manager' => array(
@@ -72,7 +86,9 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-             'Application\Controller\Error' => 'Application\Controller\ErrorController'
+            'Application\Controller\Error' => 'Application\Controller\ErrorController',
+            'Application\Controller\News' => 'Application\Controller\NewsController',
+            'Application\Controller\Upload' => 'Application\Controller\UploadController'
         ),
     ),
     'view_manager' => array(

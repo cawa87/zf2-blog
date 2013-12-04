@@ -9,19 +9,19 @@
 
 namespace Application\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Application\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractActionController
+class IndexController extends AbstractController 
 {
     public function indexAction()
     {
-        
         $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
+        $posts = $em->getRepository('Application\Entity\BlogPost')->findAll();
         //$test = $em->getRepository('Application\Entity\Test')->findById(1);
         //$t = $test[0]->getTest();
         //var_dump($t->getText(),$test);die();
-        $posts = $em->getRepository('Application\Entity\BlogPost')->findAll();
+
         return new ViewModel(['posts'=>$posts]);
     }
 }

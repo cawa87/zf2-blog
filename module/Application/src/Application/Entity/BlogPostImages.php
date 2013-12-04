@@ -56,7 +56,7 @@ class BlogPostImages
     public function setPostId($postId)
     {
         $this->postId = $postId;
-    
+
         return $this;
     }
 
@@ -79,7 +79,7 @@ class BlogPostImages
     public function setPath($path)
     {
         $this->path = $path;
-    
+
         return $this;
     }
 
