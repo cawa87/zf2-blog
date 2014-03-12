@@ -4,6 +4,7 @@ namespace Admin\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
 
 class AbstractController extends AbstractActionController {
 
@@ -12,14 +13,15 @@ class AbstractController extends AbstractActionController {
 
 
 
-    public function indexAction()
+    protected function extractArray(Entity $entity, EntityManager $em)
     {
-        return new ViewModel();
+        $hydrator = new DoctrineHydrator($em, get_class($entity));
+        return $hydrator->extract($entity);
     }
     
     public function getService()
     {
-        return $this->_service;
+        return $this->getServiceLocator()->get($this->_service);
     }
 
 }

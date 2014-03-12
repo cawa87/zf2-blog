@@ -22,8 +22,9 @@
         "zendframework/zftool": "dev-master",
         "phpunit/phpunit": "3.7.*@dev",
         "zendframework/zendservice-api": "dev-master",
-        "zendframework/zend-developer-tools": "dev-master"
-
+        "zendframework/zend-developer-tools": "dev-master",
+        "neilime/zf2-assets-bundle": "dev-master",
+        "rwoverdijk/assetmanager": "1.*"
     },
     "autoload": {
         "psr-0": {

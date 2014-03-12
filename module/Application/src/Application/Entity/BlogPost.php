@@ -10,7 +10,8 @@ use Application\Traits\OffsetSet;
  * BlogPost
  *
  * @ORM\Table(name="blog_post")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="\Application\Repository\PostRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class BlogPost implements \Zend\Stdlib\JsonSerializable
 {
@@ -44,46 +45,50 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
     /**
      * @var integer
      *
-     * @ORM\Column(name="author_id", type="integer", nullable=false)
+     * @ORM\Column(name="author_id", type="integer", nullable=true)
      */
     private $authorId;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="thumbnail_id", type="integer", nullable=false)
+     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages", mappedBy="post")
      */
-    private $thumbnailId;
-
-    /**
-     * @var \Application\Entity\TestInfo
-     *
-     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages")
-     */
-    private $thumbnail;
+    private $image;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="comments", type="integer", nullable=false)
+     * @ORM\Column(name="comments", type="integer", nullable=true)
      */
     private $comments;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="categorie_id", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Application\Entity\Categories")
+     * @var \Application\Entity\Categories
      */
-    private $categorieId;
+    private $categorie;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     * @ORM\Column(name="created_at", type="datetime")
      */
     private $createdAt;
 
-    /**
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+        /**
      * Get id
      *
      * @return integer 
@@ -221,12 +226,12 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
     /**
      * Set categorieId
      *
-     * @param integer $categorieId
+     * @param integer $categorie
      * @return BlogPost
      */
-    public function setCategorieId($categorieId)
+    public function setCategorie($categorie)
     {
-        $this->categorieId = $categorieId;
+        $this->categorie = $categorie;
 
         return $this;
     }
@@ -236,21 +241,23 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
      *
      * @return integer 
      */
-    public function getCategorieId()
+    public function getCategorie()
     {
-        return $this->categorieId;
+        return $this->categorie;
     }
 
     /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
+     * @ORM\PrePersist
      * @return BlogPost
      */
-    public function setCreatedAt($createdAt)
+    public function setCreatedAt($createdAt = null)
     {
-        $this->createdAt = $createdAt;
-
+        if (!$this->createdAt) {
+            $this->createdAt = new \DateTime('now');
+        }
         return $this;
     }
 
@@ -262,6 +269,24 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * Populate current object with data
+     * @param $data
+     * @return Entity
+     */
+    public function fromArray(array $data = array())
+    {
+
+        foreach ($data as $property => $value) {
+            $setter = 'set' . ucfirst($property);
+            if (method_exists($this, $setter))
+                $this->$setter($value);
+            elseif (property_exists($this, $property))
+                $this->$property = $value;
+        }
+        return $this;
     }
 
 }

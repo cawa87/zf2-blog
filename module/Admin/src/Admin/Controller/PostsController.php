@@ -4,71 +4,100 @@ namespace Admin\Controller;
 
 use Admin\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
-use Application\Form\PostForm;
+use Admin\Form\PostForm;
 use Application\Entity\BlogPost as Post;
-use Application\Service\PostService;
+use Admin\Form\PostFormValidator;
 
 class PostsController extends AbstractController
 {
 
-    public function __construct(PostService $service)
-    {
-        $this->_service = $service;
-    }
+    use \Application\Service\EntityManagerAccessor;
+
+    protected $_service = 'PostService';
 
     public function indexAction()
     {
-        $posts = $this->getService()->getList();
+        $posts = $this->getService()->getRepository()->findAll();
         return new ViewModel(['posts' => $posts]);
     }
 
     public function getAction()
     {
-
-        $postId = $this->params('id');
-        $categorie = $this->getService()->getById($postId);
-
-
-        $form = new PostForm();
-        $form->bind($categorie);
-
-        $viewModel = new ViewModel(['form' => $form]);
-
-        if ($this->request->isXmlHttpRequest()) {
-            $viewModel->setTerminal(true);
-        }
+        $viewModel = new ViewModel();
         return $viewModel;
     }
 
     public function createAction()
     {
-        $form = new CategorieForm();
+        $form = new PostForm();
+        $categories = $this->getEntityManager()->getRepository('Application\Entity\Categories')->findAll();
 
-        $viewModel = new ViewModel(['form' => $form]);
-
-        if ($this->request->isXmlHttpRequest()) {
-            $viewModel->setTerminal(true);
+        foreach ($categories as $categorie) {
+            $data[$categorie->getId()] = $categorie->getCategorieName();
         }
 
-        if ($this->request->isPost()) {
+        $form->get('categorie')->setValueOptions($data);
 
-            $form = new CategorieForm();
+        $response = $this->fileprg($form);
 
-            $form->setData($this->request->getPost());
+        if (is_array($response)) {
+            $post = new Post();
+            {
+                $form->setData($response);
+                // $form->setInputFilter($formValidator->getInputFilter());
+            }
             if ($form->isValid()) {
-
-                $categorie = new Categorie();
-
-                $this->getService()->exchangeArray($categorie, $form->getData());
-                $this->getService()->save($categorie);
-
-                $this->flashMessenger()->addSuccessMessage('Categorie created');
-
-                $this->redirect()->toRoute('admin', ['controller' => 'categories',
-                    'action' => 'index']);
+                $tempImgName = explode('public', $form->getData()['image-file']['tmp_name']);
+                
+                $image = new \Application\Entity\BlogPostImages();
+                $image->setPath($tempImgName[1]);
+                $cat = $this->getEntityManager()->getRepository('Application\Entity\Categories')->findOneById($form->getData()['categorie']);
+                $post->fromArray($form->getData());
+                $post->setCategorie($cat);
+                $image->setPost($post);
+                $this->getEntityManager()->persist($post);
+                $this->getEntityManager()->persist($image);
+                $this->getEntityManager()->flush();
+            } else {
+                var_dump($form->getMessages());
+                die('Error');
             }
         }
-        return $viewModel;
+
+        $response = new ViewModel(['form' => $form]);
+        return $response;
+    }
+
+    public function uploadAction()
+    {
+
+
+        /*
+
+
+
+          if ($form->isValid()) {
+          $data = $form->getData();
+          // Form is valid, save the form!
+          $tempImgName = explode('public', $data['image-file']['tmp_name']);
+          $success = new ViewModel(['img' => str_replace('\\', '/', $tempImgName[1])]);
+          $success->setTemplate('application/upload/success.phtml');
+          return $success;
+          //$this->redirect()->toRoute('application',['controller'=>'upload','action'=>'success']);
+          } else {
+          // Form not valid, but file uploads might be valid...
+          // Get the temporary file information to show the user in the view
+          $fileErrors = $form->get('image-file')->getMessages();
+          if (empty($fileErrors)) {
+          $tempFile = $form->get('image-file')->getValue();
+          }
+          }
+          }
+
+          return array(
+          'form' => $form,
+          'tempFile' => $tempFile,
+          ); */
     }
 
     public function updateAction()

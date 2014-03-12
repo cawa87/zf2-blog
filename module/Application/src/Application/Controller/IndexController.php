@@ -21,7 +21,7 @@ class IndexController extends AbstractController
         //$test = $em->getRepository('Application\Entity\Test')->findById(1);
         //$t = $test[0]->getTest();
         //var_dump($t->getText(),$test);die();
-
+        ////die();
         return new ViewModel(['posts'=>$posts]);
     }
 }

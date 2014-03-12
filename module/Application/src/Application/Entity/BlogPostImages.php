@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class BlogPostImages
 {
+
     /**
      * @var integer
      *
@@ -22,11 +23,9 @@ class BlogPostImages
     private $id;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="post_id", type="integer", nullable=false)
+     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPost",inversedBy="image",cascade={"persist", "remove"})
      */
-    private $postId;
+    private $post;
 
     /**
      * @var string
@@ -34,8 +33,6 @@ class BlogPostImages
      * @ORM\Column(name="path", type="string", length=255, nullable=false)
      */
     private $path;
-
-
 
     /**
      * Get id
@@ -48,26 +45,25 @@ class BlogPostImages
     }
 
     /**
-     * Set postId
+     * Set post
      *
-     * @param integer $postId
+     * @param integer $post
      * @return BlogPostImages
      */
-    public function setPostId($postId)
+    public function setPost($post)
     {
-        $this->postId = $postId;
-
+        $this->post = $post;
         return $this;
     }
 
     /**
-     * Get postId
+     * Get post
      *
      * @return integer 
      */
-    public function getPostId()
+    public function getPost()
     {
-        return $this->postId;
+        return $this->post;
     }
 
     /**
@@ -92,4 +88,23 @@ class BlogPostImages
     {
         return $this->path;
     }
+
+    /**
+     * Populate current object with data
+     * @param $data
+     * @return Entity
+     */
+    public function fromArray(array $data = array())
+    {
+
+        foreach ($data as $property => $value) {
+            $setter = 'set' . ucfirst($property);
+            if (method_exists($this, $setter))
+                $this->$setter($value);
+            elseif (property_exists($this, $property))
+                $this->$property = $value;
+        }
+        return $this;
+    }
+
 }

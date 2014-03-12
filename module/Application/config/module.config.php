@@ -7,6 +7,7 @@
  * @copyright Copyright (c) 2005-2013 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
+
 namespace Application;
 
 return array(
@@ -40,7 +41,7 @@ return array(
                     ),
                 ),
             ),
-             'categorie' => array(
+            'categorie' => array(
                 'type' => 'Segment',
                 'options' => array(
                     'route' => '/news[/:categorie]',
@@ -53,7 +54,6 @@ return array(
                     ),
                 ),
             )
-            
         ),
     ),
     'service_manager' => array(
@@ -64,11 +64,14 @@ return array(
         'factories' => array(
             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
             'my_memcached_alias' => function() {
-                $memcached = new \Memcached();
-                $memcached->addServer('localhost', 11211);
-                return $memcached;
-            },
+        $memcached = new \Memcached();
+        $memcached->addServer('localhost', 11211);
+        return $memcached;
+    },
         ),
+        'invokables' => [
+            'PostService' => 'Application\Service\PostService',
+        ],
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
@@ -88,7 +91,9 @@ return array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             'Application\Controller\Error' => 'Application\Controller\ErrorController',
             'Application\Controller\News' => 'Application\Controller\NewsController',
-            'Application\Controller\Upload' => 'Application\Controller\UploadController'
+            'Application\Controller\Upload' => 'Application\Controller\UploadController',
+            'Application\Controller\Contact' => 'Application\Controller\ContactController',
+            'Application\Controller\About' => 'Application\Controller\AboutController',
         ),
     ),
     'view_manager' => array(
@@ -130,5 +135,15 @@ return array(
             'routes' => array(
             ),
         ),
+    ),
+    'asset_bundle' => array(
+        'assets' => array(
+            'css' => array('css'),
+            'js' => array(
+                'js/jquery.min.js',
+                'js/bootstrap.min.js'
+            ),
+        //      'media' => array('img')
+        )
     ),
 );

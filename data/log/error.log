@@ -26,3 +26,467 @@ PHP message: PHP   9. Zend\EventManager\EventManager->triggerListeners() /home/c
 PHP message: PHP  10. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
 PHP message: PHP  11. Zend\Mvc\Controller\AbstractActionController->onDispatch() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
 PHP message: PHP  12. Application\Controller\IndexController->indexAction() /home/
+2013/12/08 11:56:08 [error] 1077#0: *31 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 11:56:43 [error] 1077#0: *31 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 11:56:45 [error] 1077#0: *31 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 11:56:45 [error] 1077#0: *31 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 11:58:29 [error] 1077#0: *36 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:03:55 [error] 1077#0: *247 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /my_css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/my_css', '')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOptions(Object(Zend\View\Ren" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:06:50 [error] 1077#0: *249 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:08:29 [error] 1077#0: *281 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'The source file "/home/cawa/www/zf2-blog/module/Application/config/../assets/css/main1.css" does not exist.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/FileAsset.php:62
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/BaseAsset.php(99): Assetic\Asset\FileAsset->load()
+#1 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/AssetCollection.php(151): Assetic\Asset\BaseAsset->dump(NULL)
+#2 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(68): Assetic\Asset\AssetCollection->dump()
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:08:50 [error] 1077#0: *281 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /my_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/my_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOp" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:10:49 [error] 1077#0: *314 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:12:06 [error] 1077#0: *316 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:12:08 [error] 1077#0: *316 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:13:47 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /my_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/my_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOp" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:14:08 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'There is no "base_js" asset.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetManager.php:37
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(315): Assetic\AssetManager->get('base_js')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOptions(Object(Zend\View\Renderer\PhpRenderer), Array)
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Listener.php(79): AsseticBundle\Service->setupRenderer(Object(Zend\View\Renderer\PhpRenderer))
+#3 [internal function]: AsseticBundle\Listener->renderAssets(Object(Zend\Mvc\MvcEvent))
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 /home/cawa/www/zf2-blog/vendor/zendframew" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:14:28 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:14:38 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:15:40 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:81
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:15:51 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:81
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:15:52 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_css.css' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:81
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_css.css', '/* ?Reset Styli...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:15:54 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:16:12 [error] 1077#0: *473 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\RuntimeException' with message 'Web path is not set' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Configuration.php:185
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/WriterFactory.php(18): AsseticBundle\Configuration->getWebPath()
+#1 [internal function]: AsseticBundle\WriterFactory->createService(Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#2 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(893): call_user_func(Array, Object(Zend\ServiceManager\ServiceManager), 'asseticassetwri...', 'AsseticAssetWri...')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php(1023): Zend\ServiceManager\ServiceManager->createServiceViaCallback(Array, 'asseticassetwri...', 'AsseticAssetWri...')
+#4 /home/cawa/www/zf2-" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:31:12 [error] 1077#0: *887 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'The source file "/home/cawa/www/zf2-blog/module/Application/config/../assets/js/jquery.prettyPhoto.min.js0" does not exist.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/FileAsset.php:73
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/AssetCollection.php(199): Assetic\Asset\FileAsset->getLastModified()
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(481): Assetic\Asset\AssetCollection->getLastModified()
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOptions(Object(Zend\View\Renderer\PhpRenderer), Array)
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-ass" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:36:35 [error] 1075#0: *1335 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'There is no "base_images" asset.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetManager.php:37
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(315): Assetic\AssetManager->get('base_images')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOptions(Object(Zend\View\Renderer\PhpRenderer), Array)
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Listener.php(79): AsseticBundle\Service->setupRenderer(Object(Zend\View\Renderer\PhpRenderer))
+#3 [internal function]: AsseticBundle\Listener->renderAssets(Object(Zend\Mvc\MvcEvent))
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 /home/cawa/www/zf2-blog/vendor/ze" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:36:53 [error] 1075#0: *1335 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'There is no "base_images" asset.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetManager.php:37
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(315): Assetic\AssetManager->get('base_images')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOptions(Object(Zend\View\Renderer\PhpRenderer), Array)
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Listener.php(79): AsseticBundle\Service->setupRenderer(Object(Zend\View\Renderer\PhpRenderer))
+#3 [internal function]: AsseticBundle\Listener->renderAssets(Object(Zend\Mvc\MvcEvent))
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 /home/cawa/www/zf2-blog/vendor/ze" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:38:26 [error] 1077#0: *1452 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'AsseticBundle\Exception\InvalidArgumentException' with message 'Filter "?JSMinFilter" required option "name"' in /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php:194
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(449): AsseticBundle\Service->initFilters(Array)
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(172): AsseticBundle\Service->prepareCollection(Array, 'base_js', Object(Assetic\Factory\AssetFactory))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Listener.php(76): AsseticBundle\Service->build()
+#3 [internal function]: AsseticBundle\Listener->renderAssets(Object(Zend\Mvc\MvcEvent))
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 /home/cawa/www/zf2-blog/vendor/" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:45:14 [error] 1076#0: *1739 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'Zend\ServiceManager\Exception\ServiceNotFoundException' with message 'Zend\View\HelperPluginManager::get was unable to fetch or create an instance for Headcript' in /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/ServiceManager.php:521
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/ServiceManager/AbstractPluginManager.php(103): Zend\ServiceManager\ServiceManager->get('Headcript', true)
+#1 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php(377): Zend\ServiceManager\AbstractPluginManager->get('Headcript', NULL)
+#2 /home/cawa/www/zf2-blog/module/Application/view/layout/layout.phtml(15): Zend\View\Renderer\PhpRenderer->plugin('Headcript')
+#3 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/View/Renderer/PhpRenderer.php(506): include('/home/cawa/www/...')
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendfr" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:48:42 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:16 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:19 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:24 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:31 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:38 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to create directory /img' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:76
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/img/favicon.ic...', '??????????????h...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\FileAsset))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\FileAsset))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(431): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\FileAsset))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(455): AsseticBundle\Service->moveRaw(Object(Assetic\Asset\As" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:49:52 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_js.js' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_js.js', '/*! jQuery v1.8...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOp" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:50:02 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_js.js' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_js.js', '/*! jQuery v1.8...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOp" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 12:50:07 [error] 1076#0: *1882 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unable to write file /base_js.js' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php:80
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(69): Assetic\AssetWriter::write('/base_js.js', '/*! jQuery v1.8...')
+#1 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#2 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollection))
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(317): AsseticBundle\Service->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(250): AsseticBundle\Service->setupRendererFromOp" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 18:48:45 [error] 1078#0: *3220 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '?>' in /home/cawa/www/zf2-blog/module/Application/view/layout/layout.phtml on line 29
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. Zend\Mvc\Application->run() /home/cawa/www/zf2-blog/public/index.php:22
+PHP message: PHP   3. Zend\Mvc\Application->completeRequest() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:301
+PHP message: PHP   4. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:349
+PHP message: PHP   5. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP   6. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   7. Zend\Mvc\View\Http\DefaultRenderingStrategy->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   8. Zend\View\View->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/View/Http/DefaultRenderingStrategy.php:102
+PHP message: PHP   9. Zend\View\Renderer\PhpRenderer->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/View/View.php:205" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET /img/slides/new/slide2.jpg HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81", referrer: "http://cawakharkov.mooo.com:81/"
+2013/12/08 18:48:50 [error] 1078#0: *3220 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '?>' in /home/cawa/www/zf2-blog/module/Application/view/layout/layout.phtml on line 29
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. Zend\Mvc\Application->run() /home/cawa/www/zf2-blog/public/index.php:22
+PHP message: PHP   3. Zend\Mvc\Application->completeRequest() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:324
+PHP message: PHP   4. Zend\EventManager\EventManager->trigger() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/Application.php:349
+PHP message: PHP   5. Zend\EventManager\EventManager->triggerListeners() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+PHP message: PHP   6. call_user_func() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   7. Zend\Mvc\View\Http\DefaultRenderingStrategy->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+PHP message: PHP   8. Zend\View\View->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/Mvc/View/Http/DefaultRenderingStrategy.php:102
+PHP message: PHP   9. Zend\View\Renderer\PhpRenderer->render() /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/View/View.php:205" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:03:08 [error] 1078#0: *3313 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'The source file "/home/cawa/www/zf2-blog/module/Application/config/../assets/js/bootstrap.min.js" does not exist.' in /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/FileAsset.php:62
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/BaseAsset.php(99): Assetic\Asset\FileAsset->load()
+#1 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/Asset/AssetCollection.php(151): Assetic\Asset\BaseAsset->dump(NULL)
+#2 /home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/Assetic/AssetWriter.php(68): Assetic\Asset\AssetCollection->dump()
+#3 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(504): Assetic\AssetWriter->writeAsset(Object(Assetic\Asset\AssetCollection))
+#4 /home/cawa/www/zf2-blog/vendor/widmogrod/zf2-assetic-module/src/AsseticBundle/Service.php(485): AsseticBundle\Service->write(Object(Assetic\Asset\AssetCollec" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:03:45 [error] 1078#0: *3320 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/functions.php): failed to open stream: No such file or directory in /home/cawa/www/zf2-blog/vendor/composer/autoload_real.php on line 47
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. require() /home/cawa/www/zf2-blog/public/index.php:14
+PHP message: PHP   3. include() /home/cawa/www/zf2-blog/init_autoloader.php:21
+PHP message: PHP   4. ComposerAutoloaderInit56374d1159ea58388ea087acf4e9bdad::getLoader() /home/cawa/www/zf2-blog/vendor/autoload.php:7
+PHP message: PHP Fatal error:  require(): Failed opening required '/home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/functions.php' (include_path='/home/cawa/www/zf2-blog/vendor/phpunit/php-timer:/home/cawa/www/zf2-blog/vendor/phpunit/php-text-template:/home/cawa/www/zf2-blog/vendor/phpunit/phpunit-mock-objects:/home/cawa/www/zf2-blog/vendor/phpunit/php-token-stream:/home/cawa/www/zf2-blog/vendor/phpunit/php-code-coverage:/home/cawa/www/zf2-blog/vendor/phpunit/php-file-iterator:/home/cawa/www/zf2-blog/vendor/phpunit/phpunit:/home/cawa/www/zf2-blog/vendor/symfony/yaml:.:/usr/share/php:/usr/share/pear') in /home/cawa/www/zf2-blog/vendor/composer/autoload_real.php on line 47
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. require() /home/cawa/www/zf2-blog/public/index.php:14
+PHP message: PHP   3. include() /home/cawa/www/zf2-blog/init_autoloader.php:21
+PHP message: PHP   4. ComposerAutoloaderInit56374d1159ea58388ea087acf4e9bdad::getLoader() /home/cawa/www/zf2-blog/vendor/autoload.php:7" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET /assets/img/slides/new/slide1.jpg HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81", referrer: "http://cawakharkov.mooo.com:8
+2013/12/08 19:03:51 [error] 1078#0: *3320 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/functions.php): failed to open stream: No such file or directory in /home/cawa/www/zf2-blog/vendor/composer/autoload_real.php on line 47
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. require() /home/cawa/www/zf2-blog/public/index.php:14
+PHP message: PHP   3. include() /home/cawa/www/zf2-blog/init_autoloader.php:21
+PHP message: PHP   4. ComposerAutoloaderInit56374d1159ea58388ea087acf4e9bdad::getLoader() /home/cawa/www/zf2-blog/vendor/autoload.php:7
+PHP message: PHP Fatal error:  require(): Failed opening required '/home/cawa/www/zf2-blog/vendor/kriswallsmith/assetic/src/functions.php' (include_path='/home/cawa/www/zf2-blog/vendor/phpunit/php-timer:/home/cawa/www/zf2-blog/vendor/phpunit/php-text-template:/home/cawa/www/zf2-blog/vendor/phpunit/phpunit-mock-objects:/home/cawa/www/zf2-blog/vendor/phpunit/php-token-stream:/home/cawa/www/zf2-blog/vendor/phpunit/php-code-coverage:/home/cawa/www/zf2-blog/vendor/phpunit/php-file-iterator:/home/cawa/www/zf2-blog/vendor/phpunit/phpunit:/home/cawa/www/zf2-blog/vendor/symfony/yaml:.:/usr/share/php:/usr/share/pear') in /home/cawa/www/zf2-blog/vendor/composer/autoload_real.php on line 47
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /home/cawa/www/zf2-blog/public/index.php:0
+PHP message: PHP   2. require() /home/cawa/www/zf2-blog/public/index.php:14
+PHP message: PHP   3. include() /home/cawa/www/zf2-blog/init_autoloader.php:21
+PHP message: PHP   4. ComposerAutoloaderInit56374d1159ea58388ea087acf4e9bdad::getLoader() /home/cawa/www/zf2-blog/vendor/autoload.php:7" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:07:23 [error] 1078#0: *3390 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Asset's file "images" does not exist' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:318
+Stack trace:
+#0 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(191): AssetsBundle\Service\Service->getValidAssets(Array, 'media')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(448): AssetsBundle\Service\Service->getAssetsConfiguration()
+#2 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/Module.php(49): AssetsBundle\Service\Service->renderAssets()
+#3 [internal function]: AssetsBundle\Module->renderAssets(Object(Zend\Mvc\MvcEvent))
+#4 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php(468): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#5 /home/cawa/www/zf2-blog/vendor/zendframework/zendframework/library/Zend/EventManager/E" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:07:31 [error] 1078#0: *3390 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:07:42 [error] 1078#0: *3390 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:07:43 [error] 1078#0: *3390 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:07:44 [error] 1078#0: *3395 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:08:06 [error] 1078#0: *3395 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:08:07 [error] 1078#0: *3395 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:08:38 [error] 1078#0: *3395 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:08:39 [error] 1078#0: *3400 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:08:55 [error] 1078#0: *3400 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"../img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/19ca8f784ad489d4f5e4bf898fa7ebdd/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheA" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:10:32 [error] 1078#0: *3403 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:11:02 [error] 1078#0: *3403 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:11:16 [error] 1078#0: *3403 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:12:34 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:12:43 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:12:44 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:12:45 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:12:57 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:13:05 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"images/button_bg.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/59b514174bffe4ae402b3d63aad79fe0/button_bg.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/* ?Reset Styli...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheAssets(Array, 'css', 'c" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:13:24 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"images/button_bg.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/59b514174bffe4ae402b3d63aad79fe0/button_bg.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/* ?Reset Styli...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBundle\Service\Service->cacheAssets(Array, 'css', 'c" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:13:54 [error] 1078#0: *3407 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:15:36 [error] 1078#0: *3416 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"
+2013/12/08 19:16:56 [error] 1078#0: *3418 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught exception 'LogicException' with message '"/home/cawa/www/zf2-blog/public/img/glyphicons-halflings.png" has not been cached as file "/home/cawa/www/zf2-blog/public/cache/b798abe6e1b1318ee36b0dcb3fb9e4d3/glyphicons-halflings.png"' in /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php:855
+Stack trace:
+#0 [internal function]: AssetsBundle\Service\Service->rewriteUrl(Array, '/home/cawa/www/...')
+#1 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(550): call_user_func(Array, Array, '/home/cawa/www/...')
+#2 [internal function]: AssetsBundle\Service\Service->AssetsBundle\Service\{closure}(Array)
+#3 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(553): preg_replace_callback('/url\(([^\)]+)\...', Object(Closure), '/*!? * Bootstra...')
+#4 /home/cawa/www/zf2-blog/vendor/neilime/zf2-assets-bundle/src/AssetsBundle/Service/Service.php(458): AssetsBu" while reading response header from upstream, client: 109.86.179.207, server: localhost, request: "GET /admin/ HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "cawakharkov.mooo.com:81"

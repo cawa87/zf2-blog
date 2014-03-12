@@ -1,6 +1,6 @@
 <div class="span9">
     <h1>
-        Blog posts
+        Записи
     </h1>
     <?php
 
@@ -31,10 +31,10 @@ FlashMessenger::NAMESPACE_ERROR,
     <?php endforeach ?>
     <div class="btn-group">
         <a href="<?php
-        echo $this->url('admin', ['controller' => 'categories',
+        echo $this->url('admin', ['controller' => 'posts',
             'action' => 'create']);
-        ?>" data-toggle="modal" data-target="#categorieEditModal" class="btn"><i class="icon-plus"></i></a>
-        <a class="btn">Right</a>
+        ?>" class="btn"><i class="icon-plus"></i></a>
+        <a class="btn"><i class="icon-magnet"></i></a>
     </div>
     <br/>
     <br/>
@@ -45,13 +45,13 @@ FlashMessenger::NAMESPACE_ERROR,
                     Id
                 </th>
                 <th>
-                    Title
+                    Заголовок
                 </th>
                 <th>
-                    Text
+                    Текст
                 </th>
                 <th>
-                    Categorie
+                    Категория
                 </th>
                 <th>
                     Created
@@ -68,25 +68,27 @@ FlashMessenger::NAMESPACE_ERROR,
                         <?php echo $post->getId(); ?>
                     </td>
                     <td>
-                        <?php echo $post->getTitle(); ?>
+                        <a href="<?= $this->url('admin', ['controller' => 'posts',
+                            'action' => 'get',
+                            'id' => $post->getId()]) ?>"><?php echo $post->getTitle(); ?></a>
                     </td>
                     <td>
                         <?php echo substr($post->getText(), 0, 100); ?>
                     </td>
                     <td>
-                        <?php echo $post->getCategorieId(); ?>
+                        <?php echo $post->getCategorie()->getId(). '- '. $post->getCategorie()->getCategorieName(); ?>
                     </td>
                     <td>
                         <?php echo $post->getCreatedAt()->format('Y-m-d H:i'); ?>
                     </td>
                     <td>
                         <a href="<?php
-                        echo $this->url('admin', ['controller' => 'categories',
+                        echo $this->url('admin', ['controller' => 'posts',
                             'action' => 'get',
                             'id' => $post->getId()]);
                         ?>" data-toggle="modal" data-target="#categorieEditModal"><i class="icon-edit"></i></a>
                         <a href="<?php
-                        echo $this->url('admin', ['controller' => 'categories',
+                        echo $this->url('admin', ['controller' => 'posts',
                             'action' => 'delete',
                             'id' => $post->getId()]);
                         ?>"><i class="icon-trash"></i></a>

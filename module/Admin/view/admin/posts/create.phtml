@@ -1,32 +1,22 @@
-<?php $form->prepare();
-
-// Assuming the "contact/process" route exists...
-$form->setAttribute('action', $this->url('admin',['controller'=>'categories','action'=>'create']));
-
-// Set the method attribute for the form
-$form->setAttribute('method', 'post');
-
-// Get the form label plugin
-$formLabel = $this->plugin('formLabel');
-
-// Render the opening tag
-echo $this->form()->openTag($form);
+<h2>Создать запись</h2>
+<script src="/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+    tinymce.init({
+        selector: "textarea"
+    });
+</script>
+<?php
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('action', $this->url('admin', ['controller' => 'posts',
+            'action' => 'create']));
 ?>
+
+<?php echo $this->form()->openTag($form) ?>
 <div class="form_element">
-    <?php
-    $name = $form->get('categorieName');
-    echo $formLabel->openTag() . $name->getOption('label');
-    echo $this->formInput($name);
-    echo $this->formElementErrors($name);
-    echo $formLabel->closeTag();
-    ?></div>
-<div class="form_element">
-    <?php
-    $name = $form->get('id');
-    echo $formLabel->openTag() . $name->getOption('label');
-    echo $this->formInput($name);
-    echo $this->formElementErrors($name);
-    echo $formLabel->closeTag();
-    ?></div>
-<?php echo $this->formElement($form->get('submit')) ?>
+    <?php foreach ($form as $element): ?>
+        <?php echo $this->formRow($element); ?>
+        <?php echo $this->formElementerrors($element); ?>
+        <?php endforeach; ?>
+</div>
 <?php echo $this->form()->closeTag() ?>

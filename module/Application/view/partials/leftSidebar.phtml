@@ -7,18 +7,22 @@
     </div><!-- side menu -->
     <?php
     // rand tags
-    $tags = ['label-important' => 0, 'label-inverse' => 1, 'label-success' => 2, 'label-warning' => 3];
+    $tags = ['label-important' => 0, 'label-inverse' => 1, 'label-success' => 2,
+        'label-warning' => 3];
     ?>
-    <?php //$this->categoriesHelper(); ?>
+<?php //$this->categoriesHelper();  ?>
     <div class="def-block widget animtt" data-gen="fadeUp" style="opacity:0;">
-        <h4> Популярные теги </h4><span class="liner"></span>
-        <div class="widget-content row-fluid">
-           <a href="#"><span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span></a>
-            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
-            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
-            <span class="label <?php echo array_rand($tags); ?>">Ля ля ля</span>
+        <h4> Популярные #теги </h4><span class="liner"></span>
+        <div class="widget-content tags">
+            <a title="17 topic" class="#" href="#"><i class="icon-tag"></i> mp3 </a>
+            <a title="44 topic" class="#" href="#"><i class="icon-tag"></i> interview </a>
+            <a title="10 topic" class="#" href="#"><i class="icon-tag"></i> video </a>
+            <a title="20 topic" class="#" href="#"><i class="icon-tag"></i> ogg </a>
+            <a title="2 topic" class="#" href="#"><i class="icon-tag"></i> fl studio </a>
+            <a title="29 topic" class="#" href="#"><i class="icon-tag"></i> dj angel </a>
+            <a title="4 topic" class="#" href="#"><i class="icon-tag"></i> remix </a>
         </div><!-- widget content -->
-    </div><!-- side tags -->
+    </div>
     <!-- Put this script tag to the <head> of your page -->
     <div class="def-block widget animtt" data-gen="fadeUp" style="opacity:0;">
         <h4> Комментарии </h4><span class="liner"></span>

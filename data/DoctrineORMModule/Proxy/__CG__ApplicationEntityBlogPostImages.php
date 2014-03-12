@@ -64,10 +64,10 @@ class BlogPostImages extends \Application\Entity\BlogPostImages implements \Doct
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'postId', 'path');
+            return array('__isInitialized__', 'id', 'post', 'path');
         }
 
-        return array('__isInitialized__', 'id', 'postId', 'path');
+        return array('__isInitialized__', 'id', 'post', 'path');
     }
 
     /**
@@ -191,23 +191,23 @@ class BlogPostImages extends \Application\Entity\BlogPostImages implements \Doct
     /**
      * {@inheritDoc}
      */
-    public function setPostId($postId)
+    public function setPost($post)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPostId', array($postId));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPost', array($post));
 
-        return parent::setPostId($postId);
+        return parent::setPost($post);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getPostId()
+    public function getPost()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPostId', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPost', array());
 
-        return parent::getPostId();
+        return parent::getPost();
     }
 
     /**
@@ -230,6 +230,18 @@ class BlogPostImages extends \Application\Entity\BlogPostImages implements \Doct
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPath', array());
 
         return parent::getPath();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function fromArray(array $data = array (
+))
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'fromArray', array($data));
+
+        return parent::fromArray($data);
     }
 
 }

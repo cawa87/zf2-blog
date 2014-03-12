@@ -29,16 +29,10 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Admin\Controller\Index' => 'Admin\Controller\IndexController',
-            //'сategories' => 'Admin\Controller\CategoriesController',
-            //'posts' => 'Admin\Controller\PostsController',
+            'сategories' => 'Admin\Controller\CategoriesController',
+            'posts' => 'Admin\Controller\PostsController',
         ),
         'factories' => array(
-            'categories' => function(Zend\Mvc\Controller\ControllerManager $cm) {
-        return new \Admin\Controller\CategoriesController($cm->getServiceLocator()->get('CategorieService'));
-    },
-            'posts' => function(Zend\Mvc\Controller\ControllerManager $cm) {
-        return new \Admin\Controller\PostsController($cm->getServiceLocator()->get('PostService'));
-    },
         ),
     ),
     'view_manager' => array(

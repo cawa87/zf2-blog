@@ -52,12 +52,7 @@ class Module
     {
         return array(
             'factories' => array(
-                'CategorieService' => function($sm) {
-            return new Service\CategorieService($sm->get('doctrine.entitymanager.orm_default'));
-        },
-                'PostService' => function($sm) {
-            return new Service\PostService($sm->get('doctrine.entitymanager.orm_default'));
-        },
+               
             ),
             'invokables' => [
             //  'CategorieService' => 'Application\Service\CategorieService'
@@ -101,11 +96,11 @@ class Module
             $helperManager->get('headlink')
                     ->appendStylesheet('/css/bootstrap.min.css')
                     ->appendStylesheet('/css/bootstrap-responsive.min.css')
-                    ->appendStylesheet('/css/style.min.css')
+                    ->appendStylesheet('/css/style.css')
                     ->appendStylesheet('/css/main.css')
                     ->appendStylesheet('/js/rs-plugin/css/settings.css')
                     //->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext')
-                    ->appendStylesheet('/css//icons/icons.css');
+                    ->appendStylesheet('/css/icons/icons.css');
 
             $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
           //          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
@@ -137,6 +132,8 @@ class Module
                     ->appendFile('//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js')
                     ->appendFile('/admin/js/site.js');
         }
+       
+       
     }
 
 }

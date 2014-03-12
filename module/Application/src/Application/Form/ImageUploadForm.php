@@ -81,13 +81,5 @@ class ImageUploadForm extends Form
 
         $this->setInputFilter($inputFilter);
     }
-
-    public function setUserId($userId)
-    {
-        if(is_numeric($userId) && !empty($userId)){
-            $this->user_id = $userId;
-        }else{
-            throw new WrongArgumentException('ImageUpload: wrong user id');
-        }
-    }
+    
 }

@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <?php echo $this->headTitle() ?>
         <?php echo $this->headMeta() ?>
-
+        <?php echo $this->headScript(); ?>
         <?php echo $this->headLink(); ?>
         <!--[if IE]>
                 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EmulateIE8; IE=EDGE" />
@@ -31,6 +31,18 @@
 
             <div class="page-content">
 
+                <?php if ($this->controllerName() != 'Application\Controller\Index'): ?>
+                    <div class="row clearfix mb">
+                        <div class="breadcrumbIn">
+                            <ul>
+                                <li><a original-title="Homepage" class="toptip" href="index.html"> <i class="icon-home"></i> </a></li>
+                                <li> <?=$this->controllerName()?> </li>
+                            </ul>
+                        </div><!-- breadcrumbIn -->
+                    </div>
+                <?php endif; ?>
+
+
                 <div class="row row-fluid clearfix mbf">
                     <div class="span8">
                         <div class="def-block">
@@ -39,7 +51,6 @@
                             <?php endif; ?>
                             <?php echo $this->content; ?>
 
-                            <div class="load-news tac"><a href="#" class="tbutton small"><span>Load More</span></a></div>
                         </div><!-- def block -->
                     </div><!-- span8 news -->
 
@@ -53,7 +64,7 @@
 
         </div><!-- end layout -->
         <!-- Scripts -->
-        <?php echo $this->headScript(); ?>
+        <?php echo $this->inlineScript(); ?>
         <script type="text/javascript">
             /* <![CDATA[ */
             var tpj = jQuery;
