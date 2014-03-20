@@ -1,16 +1,18 @@
+<?php echo $this->headTitle($this->translate('Записи'),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
 <h4><?php echo $categorie->getCategorieName(); ?></h4><span class="liner"></span>
 <?php foreach ($posts as $post): ?>
-<div class="post row-fluid clearfix">
-    <a href="#"><img alt="<?= $post->getThumbnail()->getPath() ?>" src="<?php //echo '/img/upload/' . $post->getThumbnail()->getPath() . '.jpg' ?>" style=" max-width:100%; width: 100%;"></a>
-    <h3 class="post-title"> <i class="icon-pencil"></i><a href="#"><?php echo $post->getTitle(); ?></a> </h3>
-    <div class="shorter_desc"><?php echo $post->getText(); ?>
-    
+    <div style="" class="news row-fluid animtt fadeUp">
+        <div class="span5"><img alt="#" src="<?= $post->getImage()->getPath() ?>" class="four-radius"></div>
+        <div class="span7">
+            <h3 class="news-title"> <a href="news_single.html"><?php echo $post->getTitle(); ?></a> </h3>
+            <p>
+                <?php echo substr($post->getText(), 0, 170) . '...'; ?>
+            </p>
+            <div class="meta">
+                <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span>
+            </div><!-- meta -->
+            <a class="sign-btn tbutton small" href="<?= $this->url('news', ['controller' => 'news',
+                'action' => 'view', 'id' => $post->getId()]) ?>"><span>Читать полность...</span></a>
+        </div><!-- span7 -->
     </div>
-    <div class="meta">
-        <span> <i class="icon-user mi"></i> Admin </span>
-        <span> <i class="icon-time mi"></i><?php //echo $post->getCreatedAt()->format("F j, Y, g:i a"); ?></span>
-        <span> <a href="#"><i class="icon-comments-alt"></i> 4 Comments</a> </span>
-    </div><!-- meta -->
-    <a class="Rmore tbutton small" href="news_single.html"><span>Read More</span></a>
-</div>
 <?php endforeach; ?>

@@ -21,16 +21,10 @@ class PostsController extends AbstractController
         return new ViewModel(['posts' => $posts]);
     }
 
-    public function getAction()
-    {
-        $viewModel = new ViewModel();
-        return $viewModel;
-    }
-
     public function createAction()
     {
         $form = new PostForm();
-        $categories = $this->getEntityManager()->getRepository('Application\Entity\Categories')->findAll();
+        $categories = $this->getServiceLocator()->get('CategoriesService')->getList();
 
         foreach ($categories as $categorie) {
             $data[$categorie->getId()] = $categorie->getCategorieName();
@@ -48,7 +42,7 @@ class PostsController extends AbstractController
             }
             if ($form->isValid()) {
                 $tempImgName = explode('public', $form->getData()['image-file']['tmp_name']);
-                
+
                 $image = new \Application\Entity\BlogPostImages();
                 $image->setPath($tempImgName[1]);
                 $cat = $this->getEntityManager()->getRepository('Application\Entity\Categories')->findOneById($form->getData()['categorie']);
@@ -58,46 +52,17 @@ class PostsController extends AbstractController
                 $this->getEntityManager()->persist($post);
                 $this->getEntityManager()->persist($image);
                 $this->getEntityManager()->flush();
+
+                $this->flashMessenger()->addSuccessMessage('Запись создана');
+                $this->redirect()->toRoute('admin', ['controller' => 'posts',
+                    'action' => 'index']);
             } else {
-                var_dump($form->getMessages());
-                die('Error');
+                $this->flashMessenger()->addErrorMessage('Произошла ошибка!');
             }
         }
 
         $response = new ViewModel(['form' => $form]);
         return $response;
-    }
-
-    public function uploadAction()
-    {
-
-
-        /*
-
-
-
-          if ($form->isValid()) {
-          $data = $form->getData();
-          // Form is valid, save the form!
-          $tempImgName = explode('public', $data['image-file']['tmp_name']);
-          $success = new ViewModel(['img' => str_replace('\\', '/', $tempImgName[1])]);
-          $success->setTemplate('application/upload/success.phtml');
-          return $success;
-          //$this->redirect()->toRoute('application',['controller'=>'upload','action'=>'success']);
-          } else {
-          // Form not valid, but file uploads might be valid...
-          // Get the temporary file information to show the user in the view
-          $fileErrors = $form->get('image-file')->getMessages();
-          if (empty($fileErrors)) {
-          $tempFile = $form->get('image-file')->getValue();
-          }
-          }
-          }
-
-          return array(
-          'form' => $form,
-          'tempFile' => $tempFile,
-          ); */
     }
 
     public function updateAction()
@@ -129,10 +94,20 @@ class PostsController extends AbstractController
 
         $this->getService()->deleteById($categorieId);
 
-        $this->flashMessenger()->addInfoMessage('Categorie removed');
+        $this->flashMessenger()->addInfoMessage('Запись успешно удалена');
 
-        $this->redirect()->toRoute('admin', ['controller' => 'categories',
+        $this->redirect()->toRoute('admin', ['controller' => 'posts',
             'action' => 'index']);
+    }
+
+    public function getAction()
+    {
+        $form = new PostForm();
+        $postId = $this->params('id');
+        $post = $this->getService()->getRepository()->findOneById($postId);
+        $form->get('text')->setValue($post->getText());
+        $response = new ViewModel(['form' => $form]);
+        return $response;
     }
 
 }

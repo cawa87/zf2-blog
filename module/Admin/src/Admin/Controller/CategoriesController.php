@@ -4,17 +4,15 @@ namespace Admin\Controller;
 
 use Admin\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
-use Application\Form\CategorieForm;
+use Admin\Form\CategorieForm;
 use Application\Entity\Categories as Categorie;
-use Application\Service\CategorieService;
 
 class CategoriesController extends AbstractController
 {
 
-    public function __construct(CategorieService $service)
-    {
-        $this->_service = $service;
-    }
+    use \Application\Service\EntityManagerAccessor;
+
+    protected $_service = 'CategoriesService';
 
     public function indexAction()
     {
@@ -62,7 +60,7 @@ class CategoriesController extends AbstractController
                 $this->getService()->exchangeArray($categorie, $form->getData());
                 $this->getService()->save($categorie);
 
-                $this->flashMessenger()->addSuccessMessage('Categorie created');
+                $this->flashMessenger()->addSuccessMessage('Категория создана');
 
                 $this->redirect()->toRoute('admin', ['controller' => 'categories',
                     'action' => 'index']);
@@ -86,7 +84,7 @@ class CategoriesController extends AbstractController
                 $this->getService()->save($categorie);
 
 
-                $this->flashMessenger()->addSuccessMessage('Categorie updated');
+                $this->flashMessenger()->addSuccessMessage('Категория обновлена');
 
                 $this->redirect()->toRoute('admin', ['controller' => 'categories',
                     'action' => 'index']);
@@ -100,7 +98,7 @@ class CategoriesController extends AbstractController
 
         $this->getService()->deleteById($categorieId);
 
-        $this->flashMessenger()->addInfoMessage('Categorie removed');
+        $this->flashMessenger()->addInfoMessage('Категория удалена');
 
         $this->redirect()->toRoute('admin', ['controller' => 'categories',
             'action' => 'index']);

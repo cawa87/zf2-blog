@@ -89,9 +89,9 @@ class Module
                 ? $routeMatch->getMatchedRouteName()
                 : '';
 
-        if ($routeName != 'admin') {
+        if ($routeName != 'admin' && $routeName != 'login') {
 
-            $helperManager->get('headtitle')->set('Zf2 blog system')->setSeparator(' - ')->setAutoEscape(false);
+            $helperManager->get('headtitle')->set('Чупырь Таисия,Визажист')->setSeparator(' - ')->setAutoEscape(false);
 
             $helperManager->get('headlink')
                     ->appendStylesheet('/css/bootstrap.min.css')
@@ -121,7 +121,7 @@ class Module
             $helperManager->get('headtitle')->set('Zf2 blog admin')->setSeparator(' - ')->setAutoEscape(false);
 
             $helperManager->get('headlink')
-                    ->appendStylesheet('/admin//css/bootstrap.min.css')
+                    ->appendStylesheet('/admin/css/bootstrap.min.css')
                     ->appendStylesheet('/admin/css/bootstrap-responsive.min.css')
                     ->appendStylesheet('/admin/css/style.css')
                     ->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext');
@@ -130,6 +130,7 @@ class Module
                     ->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
                     ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
                     ->appendFile('//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js')
+                    ->appendFile('/js/bootstrap.file-input.js')
                     ->appendFile('/admin/js/site.js');
         }
        

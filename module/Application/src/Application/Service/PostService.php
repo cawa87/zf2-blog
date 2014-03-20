@@ -10,12 +10,19 @@ class PostService implements ServiceLocatorAwareInterface
 {
 
     use ServiceLocatorAwareTrait;
-    use EntityManagerAccessor;
 
+use EntityManagerAccessor;
 
     public function getRepository()
     {
         return $this->getEntityManager()->getRepository('Application\Entity\BlogPost');
+    }
+
+    public function deleteById($id)
+    {
+        $post = $this->getEntityManager()->getRepository('Application\Entity\BlogPost')->find($id);
+        $this->getEntityManager()->remove($post);
+        $this->getEntityManager()->flush();
     }
 
 }

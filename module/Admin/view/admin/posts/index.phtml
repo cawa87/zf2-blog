@@ -2,33 +2,7 @@
     <h1>
         Записи
     </h1>
-    <?php
-
-    use Zend\Mvc\Controller\Plugin\FlashMessenger;
-
-$messenger = $this->flashMessenger()->getPluginFlashMessenger();
-    foreach (array(
-FlashMessenger::NAMESPACE_ERROR,
- FlashMessenger::NAMESPACE_SUCCESS,
- FlashMessenger::NAMESPACE_INFO,
- FlashMessenger::NAMESPACE_DEFAULT)
-    as $namespace):
-
-        $messenger->setNamespace($namespace);
-        $userMsgs = array_merge($messenger->getCurrentMessages(), $messenger->getMessages());
-        $messenger->clearCurrentMessages();
-
-        foreach ($userMsgs as $msg):
-            $msgText = $msg;
-            if (is_array($msg)) {
-                $msgText = $msg['message'];
-            }
-            ?>
-            <div class="alert alert-<?= $namespace ?>">
-                <?= $msgText ?>
-            </div>
-        <?php endforeach ?>
-    <?php endforeach ?>
+        <?= $this->flashmessengerHelper() ?>
     <div class="btn-group">
         <a href="<?php
         echo $this->url('admin', ['controller' => 'posts',

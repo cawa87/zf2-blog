@@ -1,0 +1,27 @@
+<?php echo $this->headTitle($this->translate('Галлерея'))->setSeparator(' - ')->setAutoEscape(false) ?>
+<h1>Галлерея</h1>
+<?= $this->flashmessengerHelper() ?>
+<ul class="thumbnails">
+    <?php foreach ($images as $image): ?>
+        <li class="span4">
+            <div class="thumbnail">
+                <img alt="" src="<?= $image->getPath() ?>">
+                <div class="caption">
+                    <h5><?= $image->getTitle() ?></h5>
+                    <p><?= $image->getPath() ?></p>
+                    <a href="<?=
+                    $this->url('admin', ['controller' => 'gallery', 'action' => 'remove',
+                        'id' => $image->getId()])
+                    ?>">Удалить</a>
+                </div>
+            </div>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+<form enctype="multipart/form-data" action="/admin/gallery/upload" method="POST">
+    <input type="text" name="title" placeholder="Заголовок"/>
+    <br>
+    <input name="uploadedfile" type="file" title="Выбрать..." required="required"/>
+    <input type="submit" value="Загрузить" class="btn" />
+</form>

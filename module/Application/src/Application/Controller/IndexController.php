@@ -17,7 +17,7 @@ class IndexController extends AbstractController
     public function indexAction()
     {
         $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        $posts = $em->getRepository('Application\Entity\BlogPost')->findAll();
+        $posts = $em->getRepository('Application\Entity\BlogPost')->findAllByDate();
         //$test = $em->getRepository('Application\Entity\Test')->findById(1);
         //$t = $test[0]->getTest();
         //var_dump($t->getText(),$test);die();

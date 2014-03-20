@@ -456,7 +456,6 @@ textarea {
 .logo {
 	float: left;
 	margin: 28px 0 14px;
-	width: 126px;
 }
 .social-head {
 	float: right;
@@ -4898,4 +4897,8 @@ a.notification-close {
 	#popupLogin {width: 310px}
 	.ajde_evcal_calendar .calendar_header p {font-size: 26px}
 	.forum .search-forum {position: relative;width: 100%}
+}
+
+.logoText:hover{
+    color: #ff0078;
 }

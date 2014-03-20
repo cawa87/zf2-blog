@@ -53,6 +53,19 @@ return array(
                         'action' => 'index',
                     ),
                 ),
+            ),
+            'news' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route' => '/news/view[/:id]',
+                    'constraints' => array(
+                        'id' => '[0-9_-]*/?',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\News',
+                        'action' => 'view',
+                    ),
+                ),
             )
         ),
     ),
@@ -71,6 +84,8 @@ return array(
         ),
         'invokables' => [
             'PostService' => 'Application\Service\PostService',
+            'CategoriesService' => 'Application\Service\CategoriesService',
+            'GalleryService' => 'Application\Service\GalleryService',
         ],
         'aliases' => array(
             'translator' => 'MvcTranslator',
@@ -94,6 +109,9 @@ return array(
             'Application\Controller\Upload' => 'Application\Controller\UploadController',
             'Application\Controller\Contact' => 'Application\Controller\ContactController',
             'Application\Controller\About' => 'Application\Controller\AboutController',
+            'Application\Controller\Gallery' => 'Application\Controller\GalleryController',
+            'Application\Controller\Service' => 'Application\Controller\ServiceController',
+            
         ),
     ),
     'view_manager' => array(
@@ -111,6 +129,11 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+    ),
+    'view_helpers' => array(
+        'invokables' => array(
+            'flashmessengerHelper' => 'Application\View\Helper\FlashMessengerHelper',
+        )
     ),
     'doctrine' => array(
         'driver' => array(

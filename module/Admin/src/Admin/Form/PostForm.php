@@ -16,6 +16,7 @@ class PostForm extends Form
         parent::__construct('admin');
 
         $this->setAttribute('method', 'post');
+       // $this->setAttribute('class', 'form-horizontal');
 
         $this->add(array(
             'name' => 'title',
@@ -26,6 +27,10 @@ class PostForm extends Form
             ),
             'options' => array(
                 'label' => 'Заголовок',
+                'label_attributes' => array(
+                    'class' => 'control-label',
+                    'element' => '<h1>'
+                ),
             ),
         ));
 
@@ -44,9 +49,10 @@ class PostForm extends Form
 
         // File Input
         $file = new Element\File('image-file');
-        $file->setLabel('Выберете изображение')
+        $file->setLabel('Выбирете изображение')
                 ->setAttribute('id', 'image-file')
-                ->setAttribute('title', 'Browse')
+                ->setAttribute('title', 'Выбрать...')
+                ->setAttribute('required', 'required')
                 ->setAttribute('class', 'fileupload');
         $this->add($file);
 
@@ -58,18 +64,23 @@ class PostForm extends Form
             //               'required' => 'false',
             ),
             'options' => array(
+                'label' => 'Запись',
             ),
         ));
 
         $this->add(array(
             'name' => 'submit',
+            'type' => 'Zend\Form\Element\Submit',
             'attributes' => array(
                 'type' => 'submit',
                 'value' => 'Создать запись',
                 'class' => 'btn small',
             ),
+            'options' => array(
+                'label' => '',
+            ),
         ));
-        
+
         $this->addInputFilter();
     }
 
@@ -83,10 +94,10 @@ class PostForm extends Form
 
 
         $fileInput->getValidatorChain()
-                ->attachByName('filesize', array('max' => 204800))
+                ->attachByName('filesize', array('max' => 504800))
                 ->attachByName('filemimetype', array('mimeType' => ['image/png',
                         'image/jpg', 'image/jpeg']))
-                ->attachByName('fileimagesize', array('maxWidth' => 2000, 'maxHeight' => 2000));
+                ->attachByName('fileimagesize', array('maxWidth' => 2500, 'maxHeight' => 2500));
 
         // All files will be renamed, i.e.:
         // ./data/tmpuploads/avatar_4b3403665fea6.png,
@@ -101,7 +112,7 @@ class PostForm extends Form
         );
 
         $inputFilter->add($fileInput);
-        
+
         $factory = new InputFactory();
         $inputFilter->add($factory->createInput([
                     'name' => 'text',

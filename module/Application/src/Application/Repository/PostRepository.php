@@ -1,8 +1,11 @@
 <?php
+
 /**
  * namespace
  */
+
 namespace Application\Repository;
+
 use Doctrine\ORM\EntityRepository as Repository;
 use Application\Entity\BlogPost;
 
@@ -12,27 +15,10 @@ use Application\Entity\BlogPost;
  */
 class PostRepository extends Repository
 {
-    /**
-     * Save PostRepository
-     * @param PostRepository $post
-     * @return BlogPost
-     */
-    public function save(BlogPost $post)
-    {
-        $this->_em->persist($post);
-        $this->_em->flush();
-        return $post;
-    }
 
-    /**
-     * Delete BlogPost
-     * @param BlogPost $post
-     */
-    public function delete(BlogPost $post)
+    public function findAllByDate()
     {
-        $this->_em->remove($post);
-        $this->_em->flush();
+        return $this->findBy(array(), array('createdAt' => 'DESC'));
     }
-
 
 }

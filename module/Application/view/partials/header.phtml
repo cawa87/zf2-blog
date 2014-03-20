@@ -6,10 +6,10 @@
             <form id="popup_login_form">
                 <input type="text" name="login_username" id="login_username" onfocus="if (this.value == 'username')
                             this.value = '';" onblur="if (this.value == '')
-                            this.value = 'username';" value="username" placeholder="username">
+                                        this.value = 'username';" value="username" placeholder="username">
                 <input type="password" name="login_password" id="login_password" onfocus="if (this.value == 'password')
                             this.value = '';" onblur="if (this.value == '')
-                            this.value = 'password';" value="password" placeholder="password">
+                                        this.value = 'password';" value="password" placeholder="password">
                 <a href="#" class="tbutton small"><span>Войти</span></a>
                 <a href="#" class="tbutton color2 small"><span>Регистрация</span></a>
             </form><!-- login form -->
@@ -26,20 +26,16 @@
             <div id="Login_PopUp_Link" class="sign-btn tbutton small"><span>Войти</span></div>
 
             <div class="social social-head">
-                <a href="http://twitter.com/" class="bottomtip" title="Follow us on Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                <a href="http://fb.com/" class="bottomtip" title="Like us on Facebook" target="_blank"><i class="icon-facebook"></i></a>
-                <a href="https://plus.google.com/" class="bottomtip" title="GooglePlus" target="_blank"><i class="icon-google-plus"></i></a>
-                <a href="http://instagram.com/" class="bottomtip" title="instagram" target="_blank"><i class="icon-instagram"></i></a>
-                <a href="http://dribbble.com/" class="bottomtip" title="Dribbble" target="_blank"><i class="icon-dribbble"></i></a>
-                <a href="https://soundcloud.com/" class="bottomtip" title="Soundcloud" target="_blank"><i class="icon-cloud"></i></a>
-                <a href="http://www.linkedin.com/" class="bottomtip" title="Linkedin" target="_blank"><i class="icon-linkedin"></i></a>
+                <a href="https://twitter.com/ChupyrTaisiya/" class="bottomtip" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                <a href="https://www.facebook.com/taisiia.chupyr" class="bottomtip" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>
+                <a href="http://instagram.com/taisiya_chupyr" class="bottomtip" title=Instagram" target="_blank"><i class="icon-instagram"></i></a>
             </div><!-- end social -->
 
             <div class="search">
                 <form action="#" id="search" method="get">
                     <input id="inputhead" name="search" type="text" onfocus="if (this.value == 'Искать...')
-                            this.value = '';" onblur="if (this.value == '')
-                            this.value = 'Искать...';" value="Искать..." placeholder="Искать ...">
+                                this.value = '';" onblur="if (this.value == '')
+                                            this.value = 'Искать...';" value="Искать..." placeholder="Искать ...">
                     <button type="submit"><i class="icon-search"></i></button>
                 </form><!-- end form -->
             </div><!-- search -->
@@ -48,8 +44,11 @@
 
     <div class="headdown">
         <div class="row clearfix">
-            <div class="logo bottomtip" title="Визаж Харьков">
-                <a href="<?php echo $this->url('home'); ?>"><img src="images/logo.png" alt="Визажист, Таисия Чупырь"></a>
+            <div class="logo" title="Визаж Харьков">
+                <a href="<?php echo $this->url('home'); ?>">
+                     <!--- <img src="/img/logo.png" alt="Визажист, Таисия Чупырь"> -->
+                    <img src="/img/slides/slide1-cap5.png" alt="Image 6" style="float: left;"><h2 class="logoText">Таисия Чупырь - визажист</h2>
+                </a>
             </div><!-- end logo -->
 
             <?php echo $this->partial('partials/navigation'); ?>

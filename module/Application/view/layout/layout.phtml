@@ -24,7 +24,7 @@
             <?php if ($this->controllerName() == 'Application\Controller\Index'): ?>
                 <?php echo $this->partial('partials/slider'); ?>
             <?php else : ?>
-                <div class="under_header"><img src="/img/assets/breadcrumbs12.png" alt="#"></div><!-- under header -->
+            <div class="under_header"><img src="/img/assets/breadcrumbs<?= rand(1,2) ?>.png" alt="#"></div><!-- under header -->
 
             <?php endif; ?>
             <!-- End Revolution Slider -->
@@ -33,12 +33,7 @@
 
                 <?php if ($this->controllerName() != 'Application\Controller\Index'): ?>
                     <div class="row clearfix mb">
-                        <div class="breadcrumbIn">
-                            <ul>
-                                <li><a original-title="Homepage" class="toptip" href="index.html"> <i class="icon-home"></i> </a></li>
-                                <li> <?=$this->controllerName()?> </li>
-                            </ul>
-                        </div><!-- breadcrumbIn -->
+                        <?= $this->partial('partials/breadcrumbs') ?>
                     </div>
                 <?php endif; ?>
 

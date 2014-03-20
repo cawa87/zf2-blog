@@ -1,0 +1,27 @@
+<?php
+switch ($this->controllerName()) {
+    case 'Application\Controller\Contact':
+        $crumb = 'Контакты';
+        break;
+    case 'Application\Controller\Gallery':
+        $crumb = 'Галлерея';
+        break;
+    case 'Application\Controller\About':
+        $crumb = 'Обо мне';
+        break;
+    case 'Application\Controller\Gallery':
+        $crumb = 'Галлерея';
+
+
+    default :
+        $crumb = 'Главная';
+        break;
+}
+?>
+
+<div class="breadcrumbIn">
+    <ul>
+        <li><a original-title="Homepage" class="toptip" href="index.html"> <i class="icon-home"></i> </a></li>
+        <li> <?= $crumb ?> </li>
+    </ul>
+</div><!-- breadcrumbIn -->

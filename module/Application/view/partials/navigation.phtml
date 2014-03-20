@@ -1,14 +1,17 @@
 <nav>
     <ul class="sf-menu">
-        <li class="current selectedLava"><a href="<?php echo $this->url('home'); ?>">Главная<span class="sub">начало</span></a>
+        <li class=""><a href="<?php echo $this->url('home'); ?>">Главная<span class="sub">начало</span></a>
         </li>
-        <li><a href="<?php echo $this->url('home',['controller'=>'gallery']); ?>">Галлерея<span class="sub">будь разной</span></a>
-            <ul>
+        <li><a href="<?php echo $this->url('home',['controller'=>'gallery']); ?>">Портфолио<span class="sub">будь разной</span></a>
+          <!--  <ul>
                 <li><a href="#">Свадебный</a></li>
                 <li><a href="#">Вечерний</a></li>
                 <li><a href="#">Мужской</a></li>
             </ul>
+          
+         -->
         </li>
+        <li><a href="<?php echo $this->url('home',['controller'=>'service']); ?>">Услуги<span class="sub">что надо знать</span></a></li>
          <li><a href="<?php echo $this->url('home',['controller'=>'about']); ?>">Обо мне<span class="sub">история</span></a></li>
           <li><a href="<?php echo $this->url('home',['controller'=>'contact']); ?>">Контакты<span class="sub">связь со мной</span></a></li>
 

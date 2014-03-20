@@ -1,0 +1,13 @@
+<h3 class="news-title"><?= $post->getTitle() ?></h3><span class="liner"></span>
+
+<div class="post row-fluid clearfix">
+        <div class="span5"><img alt="#" src="<?= $post->getImage()->getPath() ?>" class="four-radius"></div>
+        <div class="span7">
+            <p>
+                <?= $post->getText() ?>
+            </p>
+            <div class="meta">
+                <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span> 
+            </div><!-- meta -->
+        </div><!-- span7 -->
+</div>

@@ -5,7 +5,7 @@ namespace Admin\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use DoctrineModule\Stdlib\Hydrator\DoctrineObject as DoctrineHydrator;
-
+use Doctrine\ORM\EntityManager;
 class AbstractController extends AbstractActionController {
 
 
@@ -13,7 +13,7 @@ class AbstractController extends AbstractActionController {
 
 
 
-    protected function extractArray(Entity $entity, EntityManager $em)
+    protected function extractArray($entity, EntityManager $em)
     {
         $hydrator = new DoctrineHydrator($em, get_class($entity));
         return $hydrator->extract($entity);

@@ -1,40 +1,11 @@
-<?php
-var_dump($categories);
-?>
-
 <div class="span9">
     <h1>
-        Categories
+        Категории
     </h1>
-    <?php
-
-    use Zend\Mvc\Controller\Plugin\FlashMessenger;
-
-$messenger = $this->flashMessenger()->getPluginFlashMessenger();
-    foreach (array(
-FlashMessenger::NAMESPACE_ERROR,
- FlashMessenger::NAMESPACE_SUCCESS,
- FlashMessenger::NAMESPACE_INFO,
- FlashMessenger::NAMESPACE_DEFAULT)
-    as $namespace):
-
-        $messenger->setNamespace($namespace);
-        $userMsgs = array_merge($messenger->getCurrentMessages(), $messenger->getMessages());
-        $messenger->clearCurrentMessages();
-
-        foreach ($userMsgs as $msg):
-            $msgText = $msg;
-            if (is_array($msg)) {
-                $msgText = $msg['message'];
-            }
-            ?>
-            <div class="alert alert-<?= $namespace ?>">
-                <?= $msgText ?>
-            </div>
-        <?php endforeach ?>
-    <?php endforeach ?>
+    <?= $this->flashmessengerHelper() ?>
     <div class="btn-group">
-        <a href="<?php
+        <a
+            href="<?php
         echo $this->url('admin', ['controller' => 'categories',
             'action' => 'create']);
         ?>" data-toggle="modal" data-target="#categorieEditModal" class="btn"><i class="icon-plus"></i></a>
@@ -42,14 +13,14 @@ FlashMessenger::NAMESPACE_ERROR,
     </div>
     <br/>
     <br/>
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>
                     Id
                 </th>
                 <th>
-                    CategorieName
+                    Название категории
                 </th>
                 <th>
                     &nbsp;
@@ -63,7 +34,7 @@ FlashMessenger::NAMESPACE_ERROR,
                         <?php echo $categorie->getId(); ?>
                     </td>
                     <td>
-                        <?php echo $categorie->getCategorieName(); ?>
+                        <a href="#" ><?php echo $categorie->getCategorieName(); ?></a>
                     </td>
                     <td>
                         <a href="<?php
@@ -81,34 +52,12 @@ FlashMessenger::NAMESPACE_ERROR,
             <?php endforeach; ?>
         </tbody>
     </table>				
-    <div class="pagination">
-        <ul>
-            <li class="disabled">
-                <a href="#">&laquo;</a>
-            </li>
-            <li class="active">
-                <a href="#">1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li>
-                <a href="#">&raquo;</a>
-            </li>
-        </ul>
-    </div>
 </div>
 
 <div class="modal fade hide" id="categorieEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h2>Edit categorie</h2>
+        <h2>Категория</h2>
     </div>
     <div class="modal-body">
     </div>

@@ -1,0 +1,9 @@
+<h1>Похоже произошла ошибка</h1>
+<?php if (isset($messages)): ?>
+    <?php foreach ($messages as $message): ?>
+        <p>Ошибка: <?= $message ?></p>
+    <?php endforeach; ?>
+<?php endif; ?>
+<h3>
+    <a href="<?= $this->url('admin', ['controller' => 'gallery', 'action' => 'index']) ?>"> Назад</a>    
+</h3>

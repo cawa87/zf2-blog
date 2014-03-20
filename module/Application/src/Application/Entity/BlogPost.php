@@ -50,7 +50,7 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
     private $authorId;
 
     /**
-     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages", mappedBy="post")
+     * @ORM\OneToOne(targetEntity="Application\Entity\BlogPostImages", mappedBy="post", cascade={"remove"})
      */
     private $image;
 
@@ -83,12 +83,13 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
     {
         $this->image = $image;
     }
+
     public function getImage()
     {
         return $this->image;
     }
 
-        /**
+    /**
      * Get id
      *
      * @return integer 

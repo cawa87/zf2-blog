@@ -1,15 +1,19 @@
+<?php echo $this->headTitle($this->translate('Главная'),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
 <?php foreach ($posts as $post): ?>
     <div style="" class="news row-fluid animtt fadeUp">
         <div class="span5"><img alt="#" src="<?= $post->getImage()->getPath() ?>" class="four-radius"></div>
         <div class="span7">
-            <h3 class="news-title"> <a href="news_single.html"><?php echo $post->getTitle(); ?></a> </h3>
+            <h3 class="news-title"> <a href="<?= $this->url('news', ['controller' => 'news',
+                'action' => 'view', 'id' => $post->getId()]) ?>"><?php echo $post->getTitle(); ?></a> </h3>
             <p>
-                <?php echo substr($post->getText(),0,170).'...'; ?>
+                <?php echo substr($post->getText(), 0, 170) . '...'; ?>
             </p>
             <div class="meta">
-                <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span> | <span> <a href="#"><i class="icon-comments-alt"></i> 14</a> </span>
+                <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span> 
             </div><!-- meta -->
-            <a class="sign-btn tbutton small" href="news_single.html"><span>Read More</span></a>
+            <a class="sign-btn tbutton small" href="<?= $this->url('news', ['controller' => 'news',
+                'action' => 'view', 'id' => $post->getId()]) ?>">
+                <span>Читать полность...</span></a>
         </div><!-- span7 -->
     </div>
 <?php endforeach; ?>

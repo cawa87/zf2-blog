@@ -1,0 +1,17 @@
+<?php echo $this->headTitle($this->translate('Портфолио'),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
+<div class="topbar">
+    <div class="tbutton small tback" id="close"><span>&lt; Back to Albums</span></div>
+    <h4 id="name">Портфолио</h4><span class="liner"></span>
+
+</div>
+<div class="def-block clearfix">
+    <div class="mbf clearfix">
+        <?php foreach ($images as $image): ?>
+        <a class="grid_3" title="<?= $image->getTitle() ?>" data-gal="photo" href="<?= $image->getPath() ?>" >
+            <img alt="<?= $image->getTitle() ?>" src="<?= $image->getPath() ?>" class="img-polaroid">
+            <?= $image->getTitle() ?>
+            </a>
+            
+        <?php endforeach; ?>
+    </div>
+</div>

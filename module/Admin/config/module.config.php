@@ -6,18 +6,29 @@ return array(
             'admin' => array(
                 'type' => 'Segment',
                 'options' => array(
-                    'route' => '/admin[/[:controller[/[:action]/[:id]]]]',
+                    'route' => '/admin[/[:controller[/[:action][/:id]]]]',
                     'constraints' => array(
                         'controller' => '[a-zA-Z][a-zA-Z0-9_-]*/?',
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*/?',
                         'id' => '[0-9_-]*/?',
                     ),
                     'defaults' => array(
-                        'controller' => 'Admin\Controller\Index',
+                        'controller' => 'index',
                         'action' => 'index',
                     ),
                 ),
-                'may_terminate' => true,
+                'may_terminate' => true, 
+            ),
+            'login' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/admin/user',
+                    'defaults' => array(
+                        'controller' => 'user',
+                        'action' => 'index',
+                    ),
+                ),
+                'may_terminate' => true, 
             ),
         ),
     ),
@@ -28,9 +39,11 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Admin\Controller\Index' => 'Admin\Controller\IndexController',
-            'сategories' => 'Admin\Controller\CategoriesController',
+            'index' => 'Admin\Controller\IndexController',
+            'categories' => 'Admin\Controller\CategoriesController',
             'posts' => 'Admin\Controller\PostsController',
+            'gallery' => 'Admin\Controller\GalleryController',
+            'user' => 'Admin\Controller\UserController'
         ),
         'factories' => array(
         ),
