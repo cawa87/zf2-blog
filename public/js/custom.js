@@ -384,19 +384,7 @@ jQuery(document).ready(function ($) {
 			e.preventDefault();
 		});
 	}
-	// Flickr, You can find your flickr id from idgettr.com
-	if ($("#flickr-photos")[0]) {
-		$('#flickr-photos').jflickrfeed({
-			limit: 9,
-			qstrings: {
-				id: '52617155@N08'
-			},
-			itemTemplate: '<li>' + '<a href="{{image_b}}" data-gal="photo[flickr]"><img src="{{image_s}}" alt="{{title}}" /></a>' + '</li>',
-			itemCallback: function (data) {
-				$("a[data-gal^='photo']").prettyPhoto();
-			}
-		});
-	}
+	
 	// Ajax Contact
 	if ($("#contactForm")[0]) {
 		$('#contactForm').submit(function () {
@@ -409,14 +397,14 @@ jQuery(document).ready(function ($) {
 				if (jQuery.trim($(this).val()) === '') {
 					var labelText = $(this).prev('label').text();
 					$(this).addClass('fielderror');
-					$('#contactForm span').html('<strong>*Please fill out all fields.</strong>');
+					$('#contactForm span').html('<strong>*Пожалуйсто, заполните все поля.</strong>');
 					hasError = true;
 				} else if ($(this).hasClass('email')) {
 					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 					if (!emailReg.test(jQuery.trim($(this).val()))) {
 						var labelText = $(this).prev('label').text();
 						$(this).addClass('fielderror');
-						$('#contactForm span').html('<strong>Is incorrect your email address</strong>');
+						$('#contactForm span').html('<strong>Проверьте поле для почты</strong>');
 						hasError = true;
 					}
 				}
@@ -424,29 +412,19 @@ jQuery(document).ready(function ($) {
 			if (!hasError) {
 				$('#contactForm').slideDown('normal', function () {
 					$("#contactForm #sendMessage").addClass('load-color');
-					$("#contactForm #sendMessage").attr("disabled", "disabled").val('Sending message. Please wait...');
+					$("#contactForm #sendMessage").attr("disabled", "disabled").val('Отправляем сообщение, секундочку...');
 				});
 				var formInput = $(this).serialize();
 				$.post($(this).attr('action'), formInput, function (data) {
 					$('#contactForm').slideUp("normal", function () {
-						$(this).before('<div class="notification-box notification-box-success"><p><i class="icon-ok"></i>Thanks!</strong> Your email was successfully sent. We check Our email all the time, so we should be in touch soon.</p></div>');
+						$(this).before('<div class="notification-box notification-box-success"><p><i class="icon-ok"></i>Спасибо!</strong> Ваше сообщение отправленно.</p></div>');
 					});
 				});
 			}
 			return false;
 		});
 	}
-	// Twitter API 1.1
-	if ($(".tweet")[0]) {
-		jQuery(".tweet").tweet({
-			modpath: 'js/twitter/',
-			username: 'behzadg1',
-			page: 1,
-			count: 3,
-			loading_text: "<i class='icon-spinner icon-spin mi'></i>Loading Tweets..."
-		});
-		jQuery(".tweet li").prepend("<i class='icon-twitter'></i>");
-	}
+
 	// Tipsy
 	$('.toptip').tipsy({
 		fade: true,
