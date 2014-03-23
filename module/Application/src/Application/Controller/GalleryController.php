@@ -12,7 +12,7 @@ class GalleryController extends AbstractController
 
     public function indexAction()
     {
-        $images = $this->getEntityManager()->getRepository('Application\Entity\GalleryImage')->findAll();
+        $images = $this->getServiceLocator()->get('GalleryService')->getList();
         return new ViewModel(['images' => $images]);
     }
 

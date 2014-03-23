@@ -2,27 +2,11 @@
 
 namespace Application\Service;
 
-use Zend\ServiceManager\ServiceLocatorAwareInterface;
-use Application\Service\EntityManagerAccessor;
-use Zend\ServiceManager\ServiceLocatorAwareTrait;
-
-class PostService implements ServiceLocatorAwareInterface
+class PostService extends AbstractEntityService implements EntityServiceInterface
 {
+    protected $_entity = 'Application\Entity\BlogPost';
+    
 
-    use ServiceLocatorAwareTrait;
-
-use EntityManagerAccessor;
-
-    public function getRepository()
-    {
-        return $this->getEntityManager()->getRepository('Application\Entity\BlogPost');
-    }
-
-    public function deleteById($id)
-    {
-        $post = $this->getEntityManager()->getRepository('Application\Entity\BlogPost')->find($id);
-        $this->getEntityManager()->remove($post);
-        $this->getEntityManager()->flush();
-    }
+   
 
 }

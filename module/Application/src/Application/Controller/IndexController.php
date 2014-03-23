@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -12,16 +13,13 @@ namespace Application\Controller;
 use Application\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractController 
+class IndexController extends AbstractController
 {
+
     public function indexAction()
     {
-        $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        $posts = $em->getRepository('Application\Entity\BlogPost')->findAllByDate();
-        //$test = $em->getRepository('Application\Entity\Test')->findById(1);
-        //$t = $test[0]->getTest();
-        //var_dump($t->getText(),$test);die();
-        ////die();
-        return new ViewModel(['posts'=>$posts]);
+        $posts = $this->getServiceLocator()->get('PostService')->getRepository()->findAllByDate();
+        return new ViewModel(['posts' => $posts]);
     }
+
 }

@@ -3,8 +3,7 @@
 namespace Application\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Application\Traits\JsonSerializeble;
-use Application\Traits\OffsetSet;
+use Application\Entity\AbstractEntity;
 
 /**
  * BlogPost
@@ -13,12 +12,8 @@ use Application\Traits\OffsetSet;
  * @ORM\Entity(repositoryClass="\Application\Repository\PostRepository")
  * @ORM\HasLifecycleCallbacks
  */
-class BlogPost implements \Zend\Stdlib\JsonSerializable
+class BlogPost extends AbstractEntity
 {
-
-    use JsonSerializeble,
-        OffsetSet;
-
     /**
      * @var integer
      *
@@ -272,22 +267,6 @@ class BlogPost implements \Zend\Stdlib\JsonSerializable
         return $this->createdAt;
     }
 
-    /**
-     * Populate current object with data
-     * @param $data
-     * @return Entity
-     */
-    public function fromArray(array $data = array())
-    {
 
-        foreach ($data as $property => $value) {
-            $setter = 'set' . ucfirst($property);
-            if (method_exists($this, $setter))
-                $this->$setter($value);
-            elseif (property_exists($this, $property))
-                $this->$property = $value;
-        }
-        return $this;
-    }
 
 }

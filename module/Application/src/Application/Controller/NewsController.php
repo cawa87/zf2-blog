@@ -21,7 +21,7 @@ class NewsController extends AbstractController
         $categorieId = $this->params('categorie');
 
         $em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        $posts = $em->getRepository('Application\Entity\BlogPost')->findByCategorie($categorieId);
+        $posts = $this->getServiceLocator()->get('PostService')->getRepository()->findByCategorie($categorieId);
         if ($categorieId) {
             $categorie = $em->getRepository('Application\Entity\Categories')->find($categorieId);
         } else {

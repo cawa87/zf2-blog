@@ -12,7 +12,7 @@ class CategoriesController extends AbstractController
 
     use \Application\Service\EntityManagerAccessor;
 
-    protected $_service = 'CategoriesService';
+    protected $_serviceName = 'CategoriesService';
 
     public function indexAction()
     {
@@ -55,9 +55,8 @@ class CategoriesController extends AbstractController
             $form->setData($this->request->getPost());
             if ($form->isValid()) {
 
-                $categorie = new Categorie();
+                $categorie = new Categorie($form->getData());
 
-                $this->getService()->exchangeArray($categorie, $form->getData());
                 $this->getService()->save($categorie);
 
                 $this->flashMessenger()->addSuccessMessage('Категория создана');
@@ -80,7 +79,7 @@ class CategoriesController extends AbstractController
                 $id = $form->getData();
 
                 $categorie = $this->getService()->getById($id['id']);
-                $this->getService()->exchangeArray($categorie, $form->getData());
+                $categorie->fromArray( $form->getData());
                 $this->getService()->save($categorie);
 
 

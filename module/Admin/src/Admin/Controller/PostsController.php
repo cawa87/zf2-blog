@@ -6,18 +6,16 @@ use Admin\Controller\AbstractController;
 use Zend\View\Model\ViewModel;
 use Admin\Form\PostForm;
 use Application\Entity\BlogPost as Post;
-use Admin\Form\PostFormValidator;
+use Application\Entity\BlogPostImages as Image;
 
 class PostsController extends AbstractController
 {
 
-    use \Application\Service\EntityManagerAccessor;
-
-    protected $_service = 'PostService';
+    protected $_serviceName = 'PostService';
 
     public function indexAction()
     {
-        $posts = $this->getService()->getRepository()->findAll();
+        $posts = $this->getService()->getList();
         return new ViewModel(['posts' => $posts]);
     }
 
@@ -35,23 +33,21 @@ class PostsController extends AbstractController
         $response = $this->fileprg($form);
 
         if (is_array($response)) {
-            $post = new Post();
-            {
-                $form->setData($response);
-                // $form->setInputFilter($formValidator->getInputFilter());
-            }
+
             if ($form->isValid()) {
                 $tempImgName = explode('public', $form->getData()['image-file']['tmp_name']);
 
-                $image = new \Application\Entity\BlogPostImages();
-                $image->setPath($tempImgName[1]);
-                $cat = $this->getEntityManager()->getRepository('Application\Entity\Categories')->findOneById($form->getData()['categorie']);
-                $post->fromArray($form->getData());
-                $post->setCategorie($cat);
+                $image = new Image($tempImgName[1]);
+
+                $categorie = $this->getServiceLocator()->get('CategoriesService')
+                        ->findById($form->getData()['categorie']);
+
+                $post = new Post($form->getData());
+                $post->setCategorie($categorie);
                 $image->setPost($post);
-                $this->getEntityManager()->persist($post);
-                $this->getEntityManager()->persist($image);
-                $this->getEntityManager()->flush();
+
+                $this->getService()->save($post);
+                $this->getService()->save($image, true);
 
                 $this->flashMessenger()->addSuccessMessage('Запись создана');
                 $this->redirect()->toRoute('admin', ['controller' => 'posts',
@@ -67,32 +63,14 @@ class PostsController extends AbstractController
 
     public function updateAction()
     {
-        if ($this->request->isPost()) {
-
-            $form = new CategorieForm();
-
-            $form->setData($this->request->getPost());
-            if ($form->isValid()) {
-                $id = $form->getData();
-
-                $categorie = $this->getService()->getById($id['id']);
-                $this->getService()->exchangeArray($categorie, $form->getData());
-                $this->getService()->save($categorie);
-
-
-                $this->flashMessenger()->addSuccessMessage('Categorie updated');
-
-                $this->redirect()->toRoute('admin', ['controller' => 'categories',
-                    'action' => 'index']);
-            }
-        }
+        
     }
 
     public function deleteAction()
     {
-        $categorieId = $this->params('id');
+        $postId = $this->params('id');
 
-        $this->getService()->deleteById($categorieId);
+        $this->getService()->rmoveById($postId);
 
         $this->flashMessenger()->addInfoMessage('Запись успешно удалена');
 

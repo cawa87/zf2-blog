@@ -86,6 +86,7 @@ return array(
             'PostService' => 'Application\Service\PostService',
             'CategoriesService' => 'Application\Service\CategoriesService',
             'GalleryService' => 'Application\Service\GalleryService',
+            'TagService' => 'Application\Service\TagService',
         ],
         'aliases' => array(
             'translator' => 'MvcTranslator',

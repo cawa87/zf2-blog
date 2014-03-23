@@ -176,6 +176,17 @@ class Categories extends \Application\Entity\Categories implements \Doctrine\ORM
     /**
      * {@inheritDoc}
      */
+    public function setId($id)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setId', array($id));
+
+        return parent::setId($id);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getId()
     {
         if ($this->__isInitialized__ === false) {
@@ -208,6 +219,29 @@ class Categories extends \Application\Entity\Categories implements \Doctrine\ORM
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCategorieName', array());
 
         return parent::getCategorieName();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function fromArray(array $data = array (
+))
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'fromArray', array($data));
+
+        return parent::fromArray($data);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function fromJson($data = '')
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'fromJson', array($data));
+
+        return parent::fromJson($data);
     }
 
     /**
