@@ -46,7 +46,7 @@ class PostsController extends AbstractController
                 $post->setCategorie($categorie);
                 $image->setPost($post);
                 $image->setPath($tempImgName[1]);
-               
+
                 $this->getService()->save($post);
                 $this->getService()->save($image, true);
 
@@ -70,7 +70,7 @@ class PostsController extends AbstractController
     public function deleteAction()
     {
         $postId = $this->params('id');
-
+        
         $this->getService()->removeById($postId);
 
         $this->flashMessenger()->addInfoMessage('Запись успешно удалена');
@@ -81,11 +81,32 @@ class PostsController extends AbstractController
 
     public function getAction()
     {
+
         $form = new PostForm();
+
+        $form->remove('title');
+        $form->remove('categorie');
+        $form->remove('image-file');
+
+        if ($this->request->isPost()) {
+            $postNew = $this->getService()->findById($this->request->getPost()->id);
+            $postNew->setText($this->request->getPost()->text);
+            $this->getService()->save($postNew, true);
+
+            $this->flashMessenger()->addInfoMessage('Запись успешно обновлена');
+
+            $this->redirect()->toRoute('admin', ['controller' => 'posts',
+                'action' => 'index']);
+        }
+
+
         $postId = $this->params('id');
-        $post = $this->getService()->getRepository()->findOneById($postId);
+        $post = $this->getService()->findById($postId);
         $form->get('text')->setValue($post->getText());
-        $response = new ViewModel(['form' => $form]);
+
+
+
+        $response = new ViewModel(['form' => $form, 'id' => $postId]);
         return $response;
     }
 

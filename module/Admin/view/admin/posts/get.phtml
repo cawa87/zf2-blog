@@ -26,7 +26,7 @@
 $form = $this->form;
 $form->prepare();
 $form->setAttribute('action', $this->url('admin', ['controller' => 'posts',
-            'action' => 'create']));
+            'action' => 'get']));
 ?>
 
 <?php echo $this->form()->openTag($form) ?>
@@ -45,6 +45,7 @@ $form->setAttribute('action', $this->url('admin', ['controller' => 'posts',
             <?php echo $this->formRow($element); ?>
             <?php echo $this->formElementerrors($element); ?>
         </div>
+<input type="hidden" name="id" value="<?= $this->id ?>">
     <?php endif; ?>
 <?php endforeach; ?>
 
