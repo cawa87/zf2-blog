@@ -21,7 +21,7 @@ class UserController extends AbstractController
         $data = $this->getRequest()->getPost();
         var_dump($data);
         $session = new Container('user');
-        if ($data->secret == '123456') {
+        if ($data->secret == 'nfz3591cfif') {
 
             $session->offsetSet('auth', true);
             $this->redirect()->toRoute('admin', ['controller' => 'index']);

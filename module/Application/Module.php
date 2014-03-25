@@ -28,7 +28,7 @@ class Module
             $viewHelper = new ControllerName($e->getRouteMatch());
             return $viewHelper;
         });
-
+        
         $eventManager->attach('render', array($this, 'initView'));
     }
 
