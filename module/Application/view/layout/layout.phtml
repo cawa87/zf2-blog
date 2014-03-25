@@ -22,7 +22,7 @@
             <?php echo $this->partial('partials/header'); ?>
             <!-- Start Revolution Slider -->
             <?php if ($this->controllerName() == 'Application\Controller\Index'): ?>
-                <?php echo $this->partial('partials/slider'); ?>
+                <?= $this->partial('partials/slider'); ?>
             <?php else : ?>
                 <div class="under_header"><img src="/img/assets/breadcrumbs<?= rand(1, 2) ?>.png" alt="#"></div><!-- under header -->
 
@@ -76,9 +76,9 @@
                     thumbWidth: 80,
                     thumbHeight: 50,
                     thumbAmount: 5,
-                    navigationType: "none",
+                    navigationType: "no",
                     navigationArrows: "verticalcentered",
-                    navigationStyle: "square",
+                    navigationStyle: "round",
                     touchenabled: "on",
                     onHoverStop: "on",
                     navOffsetHorizontal: 0,

@@ -6,3 +6,38 @@
         Purpose of the stylesheet follows.
 */
 
+.about p{
+    text-indent: 25px;
+    color: #fff;
+    margin-bottom: 0; 
+}
+
+.about{
+    text-align: justify;
+}
+
+#round ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 42em;
+    height: 24em;
+}
+#round li {
+    height: 20em;
+    width: 30em;
+    background-color: #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+#round li.roundabout-in-focus {
+    cursor: default;
+}
+#round li span {
+    display: block;
+    padding-top: 6em;
+}
+
+#carbonads-container .carbonad {
+    margin: 0 auto;
+}

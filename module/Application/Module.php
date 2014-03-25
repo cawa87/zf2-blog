@@ -110,8 +110,9 @@ class Module
        //             ->appendFile('/js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js')
                     ->appendFile('/js/rs-plugin/js/jquery.themepunch.revolution.min.js')
                     ->appendFile('/js/jquery.flexslider-min.js')
+                    ->appendFile('/js/jquery.roundabout.min.js')
          //           ->appendFile('/js/jquery.jplayer.min.js')
-                    ->appendFile('/js/jquery.nanoscroller.min.js')
+        //            ->appendFile('/js/jquery.nanoscroller.min.js')
                     ->appendFile('/js/jquery.prettyPhoto.min.js')
                     ->appendFile('/js/bootstrap.file-input.js')
                     ->appendFile('/js/custom.js');

@@ -3,7 +3,7 @@
 namespace Application\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Application\Entity\AbstractEntity;
 /**
  * Description of GalleryImage
  *
@@ -16,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="galleryImage")
  * @ORM\Entity(repositoryClass="\Application\Repository\GalleryImageRepository")
  */
-class GalleryImage
+class GalleryImage extends AbstractEntity
 {
 
     /**
@@ -73,22 +73,5 @@ class GalleryImage
         $this->title = $title;
     }
 
-    /**
-     * Populate current object with data
-     * @param $data
-     * @return Entity
-     */
-    public function fromArray(array $data = array())
-    {
-
-        foreach ($data as $property => $value) {
-            $setter = 'set' . ucfirst($property);
-            if (method_exists($this, $setter))
-                $this->$setter($value);
-            elseif (property_exists($this, $property))
-                $this->$property = $value;
-        }
-        return $this;
-    }
-
+ 
 }

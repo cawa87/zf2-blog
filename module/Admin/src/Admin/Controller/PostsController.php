@@ -37,7 +37,7 @@ class PostsController extends AbstractController
             if ($form->isValid()) {
                 $tempImgName = explode('public', $form->getData()['image-file']['tmp_name']);
 
-                $image = new Image($tempImgName[1]);
+                $image = new Image();
 
                 $categorie = $this->getServiceLocator()->get('CategoriesService')
                         ->findById($form->getData()['categorie']);
@@ -45,7 +45,8 @@ class PostsController extends AbstractController
                 $post = new Post($form->getData());
                 $post->setCategorie($categorie);
                 $image->setPost($post);
-
+                $image->setPath($tempImgName[1]);
+               
                 $this->getService()->save($post);
                 $this->getService()->save($image, true);
 
@@ -70,7 +71,7 @@ class PostsController extends AbstractController
     {
         $postId = $this->params('id');
 
-        $this->getService()->rmoveById($postId);
+        $this->getService()->removeById($postId);
 
         $this->flashMessenger()->addInfoMessage('Запись успешно удалена');
 
