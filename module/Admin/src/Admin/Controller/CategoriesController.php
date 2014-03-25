@@ -57,7 +57,7 @@ class CategoriesController extends AbstractController
 
                 $categorie = new Categorie($form->getData());
 
-                $this->getService()->save($categorie);
+                $this->getService()->save($categorie,true);
 
                 $this->flashMessenger()->addSuccessMessage('Категория создана');
 
@@ -80,7 +80,7 @@ class CategoriesController extends AbstractController
 
                 $categorie = $this->getService()->getById($id['id']);
                 $categorie->fromArray( $form->getData());
-                $this->getService()->save($categorie);
+                $this->getService()->save($categorie,true);
 
 
                 $this->flashMessenger()->addSuccessMessage('Категория обновлена');
@@ -95,7 +95,7 @@ class CategoriesController extends AbstractController
     {
         $categorieId = $this->params('id');
 
-        $this->getService()->deleteById($categorieId);
+        $this->getService()->removeById($categorieId);
 
         $this->flashMessenger()->addInfoMessage('Категория удалена');
 

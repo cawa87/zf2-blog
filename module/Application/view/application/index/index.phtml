@@ -6,7 +6,7 @@
             <h3 class="news-title"> <a href="<?= $this->url('news', ['controller' => 'news',
                 'action' => 'view', 'id' => $post->getId()]) ?>"><?php echo $post->getTitle(); ?></a> </h3>
             <p>
-                <?php echo substr($post->getText(), 0, 170) . '...'; ?>
+                <?=$post->getText() ?>
             </p>
             <div class="meta">
                 <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span> 
