@@ -41,6 +41,18 @@ return array(
                     ),
                 ),
             ),
+              'error' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/robots.txt',
+                   
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Seo',
+                        'action' => 'robots',
+                    ),
+                ),
+            ),
+            
             'categorie' => array(
                 'type' => 'Segment',
                 'options' => array(
@@ -112,6 +124,7 @@ return array(
             'Application\Controller\About' => 'Application\Controller\AboutController',
             'Application\Controller\Gallery' => 'Application\Controller\GalleryController',
             'Application\Controller\Service' => 'Application\Controller\ServiceController',
+            'Application\Controller\Seo' => 'Application\Controller\SeoController',
             
         ),
     ),
