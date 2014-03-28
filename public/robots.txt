@@ -1,5 +1,5 @@
 User-agent: *
 Disallow: /admin
 Host: taisiya-makeup.com
-Sitemap: http://taisiya-makeup.com/sitemap.xml
+
 

@@ -16,3 +16,6 @@ nbproject
 .settings
 composer.lock
 vendor/bin
+public/img/gallery
+public/img/upload
+data/log/*

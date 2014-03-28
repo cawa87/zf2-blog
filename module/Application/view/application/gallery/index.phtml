@@ -7,9 +7,9 @@
 <div class="def-block clearfix">
     <div class="mbf clearfix">
         <?php foreach ($images as $image): ?>
-        <a class="grid_3" title="<?= $image->getTitle() ?>" data-gal="photo" href="<?= $image->getPath() ?>" >
-            <img alt="<?= $image->getTitle() ?>" src="<?= $image->getPath() ?>" class="img-polaroid">
-            <?= $image->getTitle() ?>
+        <a class="grid_3" style="padding:3px;" title="<?php // $image->getTitle() ?>" data-gal="photo" href="<?= $image->getPath() ?>" >
+            <img alt="<?php //$image->getTitle() ?>" src="<?= $image->getPath() ?>" class="img-polaroid">
+            <?php // $image->getTitle() ?>
             </a>
             
         <?php endforeach; ?>
