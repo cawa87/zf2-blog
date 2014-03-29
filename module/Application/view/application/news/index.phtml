@@ -1,3 +1,15 @@
+<?php
+function softTrim($text, $count, $wrapText='...'){
+
+    if(strlen($text)>$count){
+        preg_match('/^.{0,' . $count . '}(?:.*?)\b/siu', $text, $matches);
+        $text = $matches[0];
+    }else{
+        $wrapText = '';
+    }
+    return $text . $wrapText;
+}
+?>
 <?php echo $this->headTitle($this->translate('Записи:'.$categorie->getCategorieName()),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
 <h4><?php echo $categorie->getCategorieName(); ?></h4><span class="liner"></span>
 <?php foreach ($posts as $post): ?>
@@ -6,8 +18,8 @@
         <div class="span7">
             <h3 class="news-title"> <a href="news_single.html"><?php echo $post->getTitle(); ?></a> </h3>
             <p>
-                <?php echo substr($post->getText(), 0, 170) . '...'; ?>
-            </p>
+                <?= softTrim($post->getText(),575); ?>
+          </p>
             <div class="meta">
                 <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span>
             </div><!-- meta -->
