@@ -1,4 +1,4 @@
-<?php echo $this->headTitle($this->translate('Записи'),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
+<?php echo $this->headTitle($this->translate('Записи:'.$categorie->getCategorieName()),'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
 <h4><?php echo $categorie->getCategorieName(); ?></h4><span class="liner"></span>
 <?php foreach ($posts as $post): ?>
     <div style="" class="news row-fluid animtt fadeUp">
