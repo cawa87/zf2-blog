@@ -28,7 +28,7 @@ class Module
             $viewHelper = new ControllerName($e->getRouteMatch());
             return $viewHelper;
         });
-        
+
         $eventManager->attach('render', array($this, 'initView'));
     }
 
@@ -37,22 +37,22 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 
-    /*public function getAutoloaderConfig()
-    {
-        return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
-        );
-    }
-    */
+    /* public function getAutoloaderConfig()
+      {
+      return array(
+      'Zend\Loader\StandardAutoloader' => array(
+      'namespaces' => array(
+      __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
+      ),
+      ),
+      );
+      }
+     */
+
     public function getServiceConfig()
     {
         return array(
             'factories' => array(
-               
             ),
             'invokables' => [
             //  'CategorieService' => 'Application\Service\CategorieService'
@@ -94,28 +94,34 @@ class Module
             $helperManager->get('headtitle')->set('Чупырь Таисия,Визажист')->setSeparator(' - ')->setAutoEscape(false);
 
             $helperManager->get('headlink')
-                    ->appendStylesheet('/css/bootstrap.min.css')
-                    ->appendStylesheet('/css/bootstrap-responsive.min.css')
-                    ->appendStylesheet('/css/style.css')
-                    ->appendStylesheet('/css/main.css')
+                    /*      ->appendStylesheet('/css/bootstrap.min.css')
+                      ->appendStylesheet('/css/bootstrap-responsive.min.css')
+                      ->appendStylesheet('/css/style.css')
+                      ->appendStylesheet('/css/main.css')
+                      ->appendStylesheet('/css/icons/icons.css')
+                     */
+                    ->appendStylesheet('/css/icons/icons.css')
                     ->appendStylesheet('/js/rs-plugin/css/settings.css')
-                    //->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext')
-                    ->appendStylesheet('/css/icons/icons.css');
+                    ->appendStylesheet('/css/combined.min.css');
+            //->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext')
+            ;
 
-            $helperManager->get('headscript')->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-          //          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
-       //             ->appendFile('/js/jquery.min.js')
-                    ->appendFile('/js/theme20.min.js')
-                    ->appendFile('/js/bootstrap.min.js')
-       //             ->appendFile('/js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js')
+            $helperManager->get('headscript')
+                    ->appendFile('/js/jquery.min.js')
+                    //          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
+                    //             ->appendFile('/js/jquery.min.js')
+                    //->appendFile('/js/theme20.min.js')
+                    //->appendFile('/js/bootstrap.min.js')
+                    //             ->appendFile('/js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js')
                     ->appendFile('/js/rs-plugin/js/jquery.themepunch.revolution.min.js')
-                    ->appendFile('/js/jquery.flexslider-min.js')
-                    ->appendFile('/js/jquery.roundabout.min.js')
-         //           ->appendFile('/js/jquery.jplayer.min.js')
-        //            ->appendFile('/js/jquery.nanoscroller.min.js')
-                    ->appendFile('/js/jquery.prettyPhoto.min.js')
-                    ->appendFile('/js/bootstrap.file-input.js')
-                    ->appendFile('/js/custom.js');
+                    //->appendFile('/js/jquery.flexslider-min.js')
+                    //->appendFile('/js/jquery.roundabout.min.js')
+                    //           ->appendFile('/js/jquery.jplayer.min.js')
+                    //            ->appendFile('/js/jquery.nanoscroller.min.js')
+                    //->appendFile('/js/jquery.prettyPhoto.min.js')
+                    //->appendFile('/js/bootstrap.file-input.js')
+                    //->appendFile('/js/custom.js');
+                    ->appendFile('/js/combined.js');
         } else {
             $helperManager->get('layout')->setTemplate('layout/admin');
 
@@ -134,8 +140,6 @@ class Module
                     ->appendFile('/js/bootstrap.file-input.js')
                     ->appendFile('/admin/js/site.js');
         }
-       
-       
     }
 
 }
