@@ -23,7 +23,8 @@ function softTrim($text, $count, $wrapText='...'){
                 <?= softTrim($post->getText(),575) ?>
             </p>
             <div class="meta">
-                <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span> 
+	        <a target="_bank" href="https://plus.google.com/105500804589774662589?rel=author"><i class="icon-plus"></i> Таисия</a>
+                | <span> <i class="icon-time mi"></i><?= $post->getCreatedAt()->format('Y-m-d H:i'); ?></span>
             </div><!-- meta -->
             <a class="sign-btn tbutton small" href="<?= $this->url('news', ['controller' => 'news',
                 'action' => 'view', 'id' => $post->getId()]) ?>">
