@@ -21,7 +21,7 @@ class HttpAdapter
         $this->adapter = new Adapter();
 
         $this->path = BASE_DIR . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR .
-                'img' . DIRECTORY_SEPARATOR . 'gallery' . DIRECTORY_SEPARATOR;
+                'img' . DIRECTORY_SEPARATOR . 'gallery' ;
 
         $size = new Size(array('max' => 2000000));
 

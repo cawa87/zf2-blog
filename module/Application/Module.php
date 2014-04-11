@@ -108,20 +108,21 @@ class Module
 
             $helperManager->get('headscript')
                     ->appendFile('/js/jquery.min.js')
-                    //          ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
+                    ->appendFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js')
                     //             ->appendFile('/js/jquery.min.js')
-                    //->appendFile('/js/theme20.min.js')
+                    ->appendFile('/js/theme20.js')
                     //->appendFile('/js/bootstrap.min.js')
                     //             ->appendFile('/js/rs-plugin/pluginsources/jquery.themepunch.plugins.min.js')
                     ->appendFile('/js/rs-plugin/js/jquery.themepunch.revolution.min.js')
                     //->appendFile('/js/jquery.flexslider-min.js')
-                    //->appendFile('/js/jquery.roundabout.min.js')
-                    //           ->appendFile('/js/jquery.jplayer.min.js')
+                    ->appendFile('/js/jquery.roundabout.min.js')
+                    ->appendFile('/js/modernizr.custom.63321.js')
                     //            ->appendFile('/js/jquery.nanoscroller.min.js')
-                    //->appendFile('/js/jquery.prettyPhoto.min.js')
-                    //->appendFile('/js/bootstrap.file-input.js')
-                    //->appendFile('/js/custom.js');
-                    ->appendFile('/js/combined.js');
+                    ->appendFile('/js/jquery.stapel.js')
+                    ->appendFile('/js/jquery.prettyPhoto.js')
+                    ->appendFile('/js/bootstrap.file-input.js')
+                    ->appendFile('/js/custom.js');
+            //   ->appendFile('/js/combined.js');
         } else {
             $helperManager->get('layout')->setTemplate('layout/admin');
 

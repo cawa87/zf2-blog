@@ -332,7 +332,7 @@ jQuery(document).ready(function($) {
                 $close = $('#close'),
                 $loader = $('<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>Loading...</span></div>').insertBefore($grid),
                 stapel = $grid.stapel({
-            randomAngle: true,
+            randomAngle: false,
             delay: 100,
             gutter: 0,
             pileAngles: 3,
@@ -350,7 +350,7 @@ jQuery(document).ready(function($) {
         $close.on('click', function() {
             $("a[data-gal^='photo']").prettyPhoto().unbind();
             $close.hide();
-            $name.empty().html('Photo Gallery');
+            $name.empty().html('Портфолио');
             stapel.closePile();
         });
     }
