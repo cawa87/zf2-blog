@@ -63,7 +63,7 @@ class PostForm extends Form
             'attributes' => array(
             //               'required' => 'false',
                 'id' => 'editor1',
-                'rows' => 15
+                'rows' => 35
             ),
             'options' => array(
                 'label' => 'Запись',
