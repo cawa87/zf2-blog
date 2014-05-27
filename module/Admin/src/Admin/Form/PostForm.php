@@ -62,9 +62,12 @@ class PostForm extends Form
             'type' => 'Zend\Form\Element\Textarea',
             'attributes' => array(
             //               'required' => 'false',
+                'id' => 'editor1',
+                'rows' => 15
             ),
             'options' => array(
                 'label' => 'Запись',
+                
             ),
         ));
 
