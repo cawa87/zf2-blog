@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>GeckoSpellChecker plugin</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>GeckoSpellChecker Plugin for CKEditor</h1>
+
+<h2>Introduction</h2>
+<p>This is a plugin that allows to use the native SpellChecker of Firefox in <a href="http://www.ckeditor.com">CKEditor</a> thanks to the <a href="https://addons.mozilla.org/en-US/firefox/addon/6147">Write Area extension</a>. It doesn't provide any button for the toolbar, the editing area will show the red underlines for misspelled words and in the context menu there will appear the suggestions for that word.</p>
+<p>This plugin will work only with Firefox and you must have installed the <a href="https://addons.mozilla.org/en-US/firefox/addon/6147">Write Area extension</a> as that's the way to ask Firefox for the suggestions.</p>
+
+<h3 id="contact">Author:</h3>
+<p><a href="mailto:amla70@gmail.com">Alfonso Mart&iacute;nez de Lizarrondo</a></p>
+<h3>Version history: </h3>
+<ol>
+  <li>0.7: 18-May-2008. First version. For FCKeditor 2.x</li>
+  <li>1.0: 19-December-2009. New version for CKEditor 3.x</li>
+</ol>
+<p><a href="http://martinezdelizarrondo.com/spellcheck/">Get the latest version and/or updated info</a> </p>
+
+<h2>Installation</h2>
+<h3>1. Copying the files</h3>
+<p>Extract the contents of the zip in you plugins directory, so it ends up like
+    this<br>
+    <!--<img src="installation.png" alt="Screenshot of installation" width="311" height="346" longdesc="#install">-->
+    </p>
+<pre id="--install">
+ckeditor\
+	...
+	images\
+	lang\
+	plugins\
+		...
+		geckospellchecker\
+			plugin.js
+			docs\
+		...
+	skins\
+	themes\
+</pre>
+<h3>2. Adding it to CKEditor</h3>
+<p>Now add the plugin in your <em>config.js</em> or custom js configuration
+file:
+<code>config.extraPlugins = 'geckospellchecker'; </code>
+</p>
+<h3>3. Install Write Area</h3>
+<p>Every user of your CMS will have to install the <a href="https://addons.mozilla.org/en-US/firefox/addon/6147">Write Area extension</a> if they want to get this feature.</p>
+
+<p>This extension is specially useful in controlled environments where you can be sure about the browser that the users are running and you can ask them upfront to install the extension (or maybe install it as part of some automatic deployment). In some environments, like enterprises, using an external site to send all the data to be spellchecker might be a no-go from the start, so this plugin provides a way to use the spellchecker available at their own browser. </p>
+
+
+<h3>4. Use it</h3>
+<p align="right">Now empty the cache of your browser and reload the editor, the spellchecker of Firefox should take care of the rest.</p>
+<!--
+<h2>Final notes</h2>
+-->
+
+<h2>Disclaimers</h2>
+<p>CKEditor is  &copy; CKSource.com</p>
+<p>Firefox is  &copy; Mozilla Foundation</p>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <?= $this->flashmessengerHelper() ?>
 <script src="/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
-    tinymce.init({
+    /*tinymce.init({
         selector: "textarea",
         height : 350,
         plugins: [
@@ -19,7 +19,7 @@
             {title: 'Test template 2', content: 'Test 2'}
         ]
     });
-
+    */
 
 </script>
 <?php
@@ -49,3 +49,6 @@ $form->setAttribute('action', $this->url('admin', ['controller' => 'posts',
 <?php endforeach; ?>
 
 <?php echo $this->form()->closeTag() ?>
+<script type="text/javascript">
+    CKEDITOR.replace('editor1');
+</script>
