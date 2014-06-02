@@ -41,18 +41,16 @@ return array(
                     ),
                 ),
             ),
-              'error' => array(
+            'error' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/robots.txt',
-                   
                     'defaults' => array(
                         'controller' => 'Application\Controller\Seo',
                         'action' => 'robots',
                     ),
                 ),
             ),
-            
             'categorie' => array(
                 'type' => 'Segment',
                 'options' => array(
@@ -99,13 +97,16 @@ return array(
             'CategoriesService' => 'Application\Service\CategoriesService',
             'GalleryService' => 'Application\Service\GalleryService',
             'TagService' => 'Application\Service\TagService',
+            'UserIdentity' => 'Application\Provider\Identity\UserIdentity',
+            'RoleProviderService' => 'Application\Service\RoleProviderService',
+            'Application\View\UnauthorizedStrategy' => 'Application\View\UnauthorizedStrategy',
         ],
         'aliases' => array(
             'translator' => 'MvcTranslator',
         ),
     ),
     'translator' => array(
-        'locale' => 'en_US',
+        'locale' => 'ru_RU.utf8',
         'translation_file_patterns' => array(
             array(
                 'type' => 'gettext',
@@ -125,7 +126,7 @@ return array(
             'Application\Controller\Gallery' => 'Application\Controller\GalleryController',
             'Application\Controller\Service' => 'Application\Controller\ServiceController',
             'Application\Controller\Seo' => 'Application\Controller\SeoController',
-            
+            'Application\Controller\Search' => 'Application\Controller\SearchController',
         ),
     ),
     'view_manager' => array(
@@ -138,15 +139,18 @@ return array(
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',
+            'error/403' => __DIR__ . '/../view/error/403.phtml',
             'error/index' => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
+            'zfcuser' => __DIR__ . '/../view',
         ),
     ),
     'view_helpers' => array(
         'invokables' => array(
             'flashmessengerHelper' => 'Application\View\Helper\FlashMessengerHelper',
+            'watermark' => 'Application\View\Helper\WatermarkHelper',
         )
     ),
     'doctrine' => array(

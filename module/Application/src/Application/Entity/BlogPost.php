@@ -264,7 +264,7 @@ class BlogPost extends AbstractEntity
      */
     public function getCreatedAt()
     {
-        return $this->createdAt;
+        return strftime('%e %B %Y',$this->createdAt->getTimestamp());
     }
 
 

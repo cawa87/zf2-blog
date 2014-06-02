@@ -1,12 +1,13 @@
 {
-    "name": "zendframework/skeleton-application",
-    "description": "Skeleton Application for ZF2",
-    "license": "BSD-3-Clause",
+    "name": "cawakharkov/zf2-blog",
+    "description": "Simple blog,portfolio system, build with ZF2",
+    "license": "MIT",
     "keywords": [
         "framework",
-        "zf2"
+        "zf2",
+        "blog",
+        "portfolio"
     ],
-    "homepage": "http://framework.zend.com/",
     "repositories": [
         {
             "type": "composer",
@@ -24,7 +25,10 @@
         "zendframework/zendservice-api": "dev-master",
         "zendframework/zend-developer-tools": "dev-master",
         "neilime/zf2-assets-bundle": "dev-master",
-        "rwoverdijk/assetmanager": "1.*"
+        "rwoverdijk/assetmanager": "1.*",
+        "zf-commons/zfc-user": "1.*@dev",
+        "zf-commons/zfc-user-doctrine-orm": "dev-master",
+        "bjyoungblood/bjy-authorize": "dev-master"
     },
     "autoload": {
         "psr-0": {

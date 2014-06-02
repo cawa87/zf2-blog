@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Global Configuration Override
  *
@@ -10,7 +11,12 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
 return array(
-    // ...
+    'session_config' => array(
+        'name' => 'user',
+        'remember_me_seconds' => 60 * 60 * 24 * 30 * 3,
+        'use_cookies' => true,
+        'cookie_httponly' => true,
+    ),
+    'enable_default_entities ' => false
 );
