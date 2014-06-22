@@ -1,0 +1,24 @@
+<?php echo $this->headTitle($this->translate('Отзывы'), 'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
+<h4>Отзывы и пожелания</h4><span class="liner"></span>
+<a class="btn btn-inverse" href="<?= $this->url('home', ['controller' => 'review',
+    'action' => 'add']); ?>"> Добавить отзыв <i class="icon-plus-sign"></i></a>
+<br>
+<br>
+<span class="liner"></span>
+<div style="" class="news row-fluid animtt fadeUp">
+    <ul style="color: white;" class="the-list">
+                <?php foreach ($reviews as $review): ?>
+            <li><p><i class="icon-ok"></i>
+    <?= $review->getText() ?></p>
+                <div class="meta">
+                    <i class="icon-mail-forward"></i>  <?= $review->getEmail() ?>
+                    | <span> <i class="icon-time"></i><?= $review->getCreatedAt(); ?></span>
+                </div><!-- meta -->
+            </li>
+            <hr> 
+<?php endforeach; ?>
+
+    </ul>
+
+
+</div>

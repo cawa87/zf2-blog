@@ -1,3 +1,4 @@
+<?php echo $this->headTitle($this->translate('Записи'), 'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
 <div class="span9">
     <h1>
         Записи
@@ -53,7 +54,7 @@
                         <?php echo $post->getCategorie()->getId(). '- '. $post->getCategorie()->getCategorieName(); ?>
                     </td>
                     <td>
-                        <?php echo $post->getCreatedAt()->format('Y-m-d H:i'); ?>
+                        <?php echo $post->getCreatedAt(); ?>
                     </td>
                     <td>
                         <a href="<?php

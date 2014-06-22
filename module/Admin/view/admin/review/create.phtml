@@ -1,0 +1,30 @@
+<?php echo $this->headTitle($this->translate('Отзывы'), 'PREPEND')->setSeparator(' - ')->setAutoEscape(false) ?>
+<h4>Добавить отзыв</h4><span class="liner"></span>
+<div style="" class="news row-fluid animtt fadeUp" id="">
+    <?php
+    $form = $this->form;
+    $form->prepare();
+    $form->setAttribute('action', $this->url('admin', ['controller' => 'review',
+                'action' => 'create']));
+    ?>
+
+    <?php echo $this->form()->openTag($form) ?>
+    <?php foreach ($form as $element): ?>
+        <?php if (!$element instanceof Zend\Form\Element\Submit): ?>
+            <div class="control-group">
+                <?php echo $this->formLabel($element); ?>
+                <div class="controls" id="review">
+                    <?php echo $this->formElement($element); ?>
+                    <?php echo $this->formElementerrors($element); ?>
+                </div>
+            </div>
+        <?php else: ?>
+            <div class="form-actions">
+                <?php echo $this->formRow($element); ?>
+                <?php echo $this->formElementerrors($element); ?>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
+    <?php echo $this->form()->closeTag() ?>
+</div>

@@ -1,4 +1,5 @@
 <?php
+namespace Admin;
 
 return array(
     'router' => array(
@@ -43,7 +44,7 @@ return array(
             'categories' => 'Admin\Controller\CategoriesController',
             'posts' => 'Admin\Controller\PostsController',
             'gallery' => 'Admin\Controller\GalleryController',
-            'user' => 'Admin\Controller\UserController'
+            'review' => 'Admin\Controller\ReviewController'
         ),
         'factories' => array(
         ),

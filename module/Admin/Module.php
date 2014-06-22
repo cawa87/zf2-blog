@@ -18,7 +18,7 @@ class Module
         $moduleRouteListener->attach($eventManager);
 
 
-        $eventManager->attach(MvcEvent::EVENT_ROUTE, function($e) {
+       /* $eventManager->attach(MvcEvent::EVENT_ROUTE, function($e) {
             $route = $e->getRouteMatch()->getMatchedRouteName();
             $controller = $e->getRouteMatch()->getParam('controller');
             $session = new Container('user');
@@ -32,7 +32,7 @@ class Module
 
                 return $response;
             }
-        });
+        });*/
     }
 
     public function getConfig()

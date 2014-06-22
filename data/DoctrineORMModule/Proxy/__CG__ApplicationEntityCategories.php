@@ -64,10 +64,10 @@ class Categories extends \Application\Entity\Categories implements \Doctrine\ORM
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'categorieName');
+            return array('__isInitialized__', '' . "\0" . 'Application\\Entity\\Categories' . "\0" . 'id', '' . "\0" . 'Application\\Entity\\Categories' . "\0" . 'categorieName');
         }
 
-        return array('__isInitialized__', 'id', 'categorieName');
+        return array('__isInitialized__', '' . "\0" . 'Application\\Entity\\Categories' . "\0" . 'id', '' . "\0" . 'Application\\Entity\\Categories' . "\0" . 'categorieName');
     }
 
     /**

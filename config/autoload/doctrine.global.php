@@ -8,7 +8,7 @@ return array(
                 'params' => array(
                     'host' => 'localhost',
                     'port' => '3306',
-                    'user' => 'root',
+                    'user' => '',
                     'password' => '',
                     'dbname' => 'zf2_blog',
                     'driverOptions' => array(
@@ -16,6 +16,12 @@ return array(
                     ),
                 )
             )
+        ),
+        'configuration' => array(
+            'orm_default' => array(
+                'proxy_dir' => 'data/DoctrineORMModule/Proxy',
+                'proxy_namespace' => 'DoctrineORMModule\Proxy',
+            )    
         )
     )
 );

@@ -53,6 +53,9 @@ class Module
     {
         return array(
             'factories' => array(
+                'db1_proxy' => function($sm) {
+            return $sm->get('db1');
+        }
             ),
             'invokables' => [
             //  'CategorieService' => 'Application\Service\CategorieService'
@@ -94,17 +97,16 @@ class Module
             $helperManager->get('headtitle')->set('Чупырь Таисия,Визажист')->setSeparator(' - ')->setAutoEscape(false);
 
             $helperManager->get('headlink')
-                    /*      ->appendStylesheet('/css/bootstrap.min.css')
-                      ->appendStylesheet('/css/bootstrap-responsive.min.css')
-                      ->appendStylesheet('/css/style.css')
-                      ->appendStylesheet('/css/main.css')
-                      ->appendStylesheet('/css/icons/icons.css')
-                     */
-                    ->appendStylesheet('/css/icons/icons.css')
-                    ->appendStylesheet('/js/rs-plugin/css/settings.css')
-                    ->appendStylesheet('/css/combined.min.css');
-            //->appendStylesheet('//fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin,cyrillic-ext')
-            ;
+            /*      ->appendStylesheet('/css/bootstrap.min.css')
+              ->appendStylesheet('/css/bootstrap-responsive.min.css')
+              ->appendStylesheet('/css/style.css')
+              ->appendStylesheet('/css/main.css')
+              ->appendStylesheet('/css/icons/icons.css')
+             */
+            ->appendStylesheet('/css/icons/icons.css')
+            ->appendStylesheet('/js/rs-plugin/css/settings.css')
+            ->appendStylesheet('/css/combined.min.css')
+            ->appendStylesheet('//fonts.googleapis.com/css?family=Seymour+One&subset=latin,cyrillic');
 
             $helperManager->get('headscript')
                     ->appendFile('/js/jquery.min.js')
