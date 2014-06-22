@@ -49,23 +49,7 @@ use EntityManagerAccessor;
             // get default/guest role
             return $this->getDefaultRole();
         } else {
-            // get roles associated with the logged in user
-            $builder = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default')->getConnection()->createQueryBuilder();
-            $builder->select("role_id")
-                    ->from('user_role_linker', 'user_role_linker')
-                    ->where('user_id=:user_id')
-                    ->setParameter('user_id', $authService->getIdentity()->getId());
-            $result = $builder->execute();
-            $roles = array();
-
-            foreach ($result as $row) {
-
-                $roles[] = $this->roles[$row['role_id']];
-            }
-
-
-
-            return $roles;
+            return $authService->getIdentity()->getRoles();
         }
     }
 

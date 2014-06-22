@@ -14,8 +14,7 @@ class SearchController extends AbstractController
 
         $query = $this->params('q',null);
         
-        $posts = $this->getServiceLocator()->get('PostService')->getRepository()->find
-        
+        $posts = $this->getServiceLocator()->get('PostService')->getRepository()->findBy(['text' => $query]);
         $view->setVariables(['results']);
         return $view;
     }

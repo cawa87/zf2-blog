@@ -99,6 +99,7 @@ return array(
             'TagService' => 'Application\Service\TagService',
             'UserIdentity' => 'Application\Provider\Identity\UserIdentity',
             'RoleProviderService' => 'Application\Service\RoleProviderService',
+            'ReviewService' => 'Application\Service\UserReviewService',
             'Application\View\UnauthorizedStrategy' => 'Application\View\UnauthorizedStrategy',
         ],
         'aliases' => array(
@@ -127,6 +128,7 @@ return array(
             'Application\Controller\Service' => 'Application\Controller\ServiceController',
             'Application\Controller\Seo' => 'Application\Controller\SeoController',
             'Application\Controller\Search' => 'Application\Controller\SearchController',
+            'Application\Controller\Review' => 'Application\Controller\ReviewController',
         ),
     ),
     'view_manager' => array(
@@ -144,7 +146,7 @@ return array(
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
-            'zfcuser' => __DIR__ . '/../view',
+        //   'zfcuser' => __DIR__ . '/../view',
         ),
     ),
     'view_helpers' => array(

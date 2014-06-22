@@ -82,6 +82,7 @@ return array(
                 array('controller' => 'Application\Controller\About', 'roles' => array()),
                 array('controller' => 'Application\Controller\Contact', 'roles' => array()),
                 array('controller' => 'Application\Controller\Search', 'roles' => array()),
+                array('controller' => 'Application\Controller\Review', 'roles' => array()),
                 array('controller' => 'zfcuser', 'roles' => array()),
                 array('controller' => 'Application\Controller\User', 'roles' => array(
                         'user')),
@@ -96,6 +97,7 @@ return array(
                 array('controller' => 'posts', 'roles' => array('admin')),
                 array('controller' => 'categories', 'roles' => array('admin')),
                 array('controller' => 'gallery', 'roles' => array('admin')),
+                array('controller' => 'review', 'roles' => array('admin')),
             //Api controllers
             ),
         /* If this guard is specified here (i.e. it is enabled), it will block
