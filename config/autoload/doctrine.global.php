@@ -9,7 +9,7 @@ return array(
                     'host' => 'localhost',
                     'port' => '3306',
                     'user' => 'root',
-                    'password' => 'cawa123azs',
+                    'password' => '',
                     'dbname' => 'zf2_blog',
                     'driverOptions' => array(
                         1002 => 'SET NAMES utf8',

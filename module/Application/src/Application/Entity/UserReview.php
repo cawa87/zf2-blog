@@ -39,6 +39,13 @@ class UserReview extends AbstractEntity
 
     /**
      * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=100, nullable=false)
+     */
+    private $username;
+
+    /**
+     * @var string
      * @ORM\Column(type="text", nullable=false)
      */
     protected $text;
@@ -122,6 +129,16 @@ class UserReview extends AbstractEntity
     public function getCreatedAt()
     {
         return strftime('%e %B %Y', $this->createdAt->getTimestamp());
+    }
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    public function setUsername($username)
+    {
+        $this->username = $username;
     }
 
 }

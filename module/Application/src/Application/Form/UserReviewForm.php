@@ -29,12 +29,17 @@ class UserReviewForm extends Form
 
     public function addElements()
     {
-        // File Input
-        $name = new Element\Email('email');
-        $name->setLabel('Ваш email');
-        $this->add($name);
+        
 
-        // File Input
+        $username = new Element\Text('username');
+        $username->setLabel('Ваша фамилия, имя');
+        $username->setAttribute('required', true);
+        $this->add($username);
+        
+        $email = new Element\Email('email');
+        $email->setLabel('Ваш email, не обязятельно');
+        $this->add($email);
+
         $text = new Element\Textarea('text');
         $text->setLabel('Ваш отзыв')
                 ->setAttribute('cols', '1')
@@ -66,7 +71,7 @@ class UserReviewForm extends Form
         $inputFilter = new InputFilter\InputFilter();
 
         $nameInput = new InputFilter\Input('email');
-        $nameInput->setRequired(true);
+        $nameInput->setRequired(false);
 
         $inputFilter->add($nameInput);
 

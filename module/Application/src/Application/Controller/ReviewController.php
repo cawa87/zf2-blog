@@ -28,7 +28,6 @@ class ReviewController extends AbstractController
 
             $form->setData($this->request->getPost());
             if ($form->isValid()) {
-
                 $review = new \Application\Entity\UserReview($form->getData());
 
                 $service->save($review, true);
