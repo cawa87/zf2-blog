@@ -19,8 +19,8 @@ function softTrim($text, $count, $wrapText='...'){
     <div style="" class="news row-fluid animtt fadeUp">
         <div class="span5"><img alt="#" src="<?= $post->getImage()->getPath() ?>" class="four-radius"></div>
         <div class="span7">
-            <h3 class="news-title"> <a href="<?= $this->url('news', ['controller' => 'news',
-                'action' => 'view', 'id' => $post->getId()]) ?>"><?php echo $post->getTitle(); ?></a> </h3>
+            <h2 class="news-title"> <a style="font-size:18px;border-bottom: 1px solid #FF0078;" href="<?= $this->url('news', ['controller' => 'news',
+                'action' => 'view', 'id' => $post->getId()]) ?>"><?php echo $post->getTitle(); ?></a> </h2>
             <p>
                 <?= softTrim($post->getText(),575) ?>
             </p>
